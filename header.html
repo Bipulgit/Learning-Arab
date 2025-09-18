@@ -1,182 +1,357 @@
-<!-- Header Component with Multi-Language Support -->
+<!-- Fixed Header Component with Improved Features -->
 <header class="w-full sticky top-0 z-50 bg-white shadow-lg transition-all duration-300" id="main-header">
     <!-- Top Bar -->
-    <div class="bg-primary text-white py-1 sm:py-2">
+    <div class="bg-primary text-white py-2 sm:py-3">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div class="flex flex-col xs:flex-row justify-between items-center space-y-1 xs:space-y-0">
+            <div class="flex flex-col xs:flex-row justify-between items-center space-y-2 xs:space-y-0">
                 <!-- Left Side -->
                 <div class="flex items-center justify-center xs:justify-start w-full xs:w-auto">
                     <a href="mailto:Info@sanmarklearning.com" class="flex items-center text-xs sm:text-sm hover:text-gray-200 transition-colors">
-                        <i class="fa fa-envelope mr-1 sm:mr-2 text-xs"></i>
-                        <span class="hidden xs:inline" data-translate="email">Info@sanmarklearning.com</span>
-                        <span class="xs:hidden" data-translate="email_short">Email Us</span>
+                        <i class="fa fa-envelope mr-2 text-sm"></i>
+                        <span class="hidden sm:inline" data-translate="email">Info@sanmarklearning.com</span>
+                        <span class="sm:hidden" data-translate="email_short">Email Us</span>
                     </a>
                 </div>
                 
                 <!-- Right Side -->
-                <div class="flex items-center justify-center xs:justify-end space-x-2 sm:space-x-4 w-full xs:w-auto">
-                    <!-- Language Selector -->
+                <div class="flex items-center justify-center xs:justify-end space-x-3 sm:space-x-4 w-full xs:w-auto">
+                    <!-- Enhanced Language Selector -->
                     <div class="relative group">
-                        <button class="flex items-center text-xs sm:text-sm hover:text-gray-200 transition-colors bg-white/10 px-2 py-1 rounded" id="language-selector">
+                        <button class="flex items-center text-sm hover:text-gray-200 transition-all duration-300 bg-white/20 hover:bg-white/30 px-3 py-2 rounded-md backdrop-blur-sm" id="language-selector">
                             <i class="fas fa-globe mr-2"></i>
-                            <span id="current-language">English</span>
-                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            <span id="current-language" class="font-medium">English</span>
+                            <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                         </button>
-                        <div class="absolute right-0 top-full mt-1 bg-white text-gray-800 rounded-lg shadow-lg min-w-[120px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 language-option" data-lang="en" data-dir="ltr">
-                                <i class="fas fa-flag mr-2"></i>English
-                            </a>
-                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 language-option" data-lang="ar" data-dir="rtl">
-                                <i class="fas fa-flag mr-2"></i>العربية
-                            </a>
+                        
+                        <!-- Enhanced Dropdown with Better Visibility -->
+                        <div class="absolute right-0 top-full mt-2 bg-white text-gray-800 rounded-lg shadow-2xl min-w-[140px] border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-1 group-hover:translate-y-0 z-[100]">
+                            <div class="py-2">
+                                <a href="#" class="flex items-center px-4 py-3 text-sm hover:bg-blue-50 hover:text-primary transition-all duration-200 language-option" data-lang="en" data-dir="ltr">
+                                    <img src="https://flagcdn.com/w20/us.png" alt="English" class="w-4 h-3 mr-3 rounded-sm">
+                                    <span class="font-medium">English</span>
+                                </a>
+                                <div class="border-t border-gray-100"></div>
+                                <a href="#" class="flex items-center px-4 py-3 text-sm hover:bg-blue-50 hover:text-primary transition-all duration-200 language-option" data-lang="ar" data-dir="rtl">
+                                    <img src="https://flagcdn.com/w20/sa.png" alt="Arabic" class="w-4 h-3 mr-3 rounded-sm">
+                                    <span class="font-medium">العربية</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <select class="bg-transparent text-white text-xs sm:text-sm border border-white/20 rounded px-1 sm:px-2 py-0.5 sm:py-1 focus:outline-none">
-                        <option value="saudi" class="text-black" data-translate="saudi">Saudi Arabia</option>
-                        <option value="australia" class="text-black" data-translate="australia">Australia</option>
-                    </select>
-                    <a href="auth/login.html" class="text-xs sm:text-sm hover:text-gray-200 transition-colors" data-translate="login">Login</a>
-                    <a href="auth/register.html" class="text-xs sm:text-sm hover:text-gray-200 transition-colors" data-translate="register">Register</a>
+                    
+                    <!-- Country Selector -->
+                    <div class="relative group">
+                        <select class="bg-white/20 hover:bg-white/30 text-white text-sm border border-white/30 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 backdrop-blur-sm cursor-pointer">
+                            <option value="saudi" class="text-black bg-white" data-translate="saudi">🇸🇦 Saudi Arabia</option>
+                            <option value="australia" class="text-black bg-white" data-translate="australia">🇦🇺 Australia</option>
+                        </select>
+                    </div>
+                    
+                    <a href="auth/login.html" class="text-sm hover:text-gray-200 transition-colors bg-white/10 hover:bg-white/20 px-3 py-2 rounded-md font-medium" data-translate="login">Login</a>
+                    <a href="auth/register.html" class="text-sm hover:text-gray-200 transition-colors bg-white/10 hover:bg-white/20 px-3 py-2 rounded-md font-medium" data-translate="register">Register</a>
                 </div>
             </div>
         </div>
     </div>
     
     <!-- Main Navigation -->
-    <div class="bg-white border-b">
+    <div class="bg-white border-b border-gray-100">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div class="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20">
+            <div class="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-22">
                 <!-- Logo -->
-                <div class="flex-shrink-0 animate-fade-in">
+                <div class="flex-shrink-0">
                     <a href="index.html" class="block transition-transform duration-300 hover:scale-105">
-                        <img src="assets/images/logos/fulllogo_transparent_nobuffer-1.png" alt="SanMark Learning" class="h-8 sm:h-10 md:h-12 w-auto">
+                        <img src="assets/images/logos/fulllogo_transparent_nobuffer-1.png" alt="SanMark Learning" class="h-10 sm:h-12 md:h-14 w-auto">
                     </a>
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <nav class="hidden xl:flex items-center space-x-6 2xl:space-x-8 rtl:space-x-reverse">
-                    <a href="index.html" class="text-primary font-medium hover:text-blue-600 transition-all duration-300 text-sm 2xl:text-base relative group">
+                <nav class="hidden xl:flex items-center space-x-8 2xl:space-x-10 rtl:space-x-reverse">
+                    <a href="index.html" class="text-primary font-semibold hover:text-blue-700 transition-all duration-300 text-base 2xl:text-lg relative group">
                         <span data-translate="home">Home</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></span>
                     </a>
                     
-                    <!-- Courses Mega Menu -->
+                    <!-- Enhanced Courses Mega Menu -->
                     <div class="relative group">
-                        <button class="text-primary font-medium hover:text-blue-600 transition-all duration-300 flex items-center text-sm 2xl:text-base relative">
+                        <button class="text-primary font-semibold hover:text-blue-700 transition-all duration-300 flex items-center text-base 2xl:text-lg relative">
                             <span data-translate="courses">Courses</span>
-                            <i class="fa fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180 rtl:ml-0 rtl:mr-1"></i>
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                            <i class="fa fa-chevron-down ml-2 text-sm transition-transform duration-300 group-hover:rotate-180 rtl:ml-0 rtl:mr-2"></i>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></span>
                         </button>
                         
-                        <!-- Mega Menu Dropdown -->
-                        <div class="absolute left-0 rtl:left-auto rtl:right-0 top-full mt-2 w-screen max-w-7xl bg-white border rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 z-50" style="left: -200px;">
-                            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-4 border-b">
-                                <h3 class="text-lg font-semibold text-gray-800 animate-fade-in" data-translate="browse_courses">Browse Our Courses</h3>
-                                <p class="text-sm text-gray-600 animate-fade-in animation-delay-200" data-translate="course_subtitle">Choose from our comprehensive range of professional certifications</p>
+                        <!-- Enhanced Mega Menu with More Courses and Vertical Scroll -->
+                        <div class="absolute left-0 rtl:left-auto rtl:right-0 top-full mt-3 bg-white border border-gray-200 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 z-[60]" style="width: 1000px; left: -400px;">
+                            <!-- Header -->
+                            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-6 rounded-t-xl">
+                                <h3 class="text-xl font-bold mb-2" data-translate="browse_courses">Browse Our Courses</h3>
+                                <p class="text-blue-100 text-sm" data-translate="course_subtitle">Choose from our comprehensive range of professional certifications</p>
                             </div>
                             
-                            <div class="p-6">
-                                <div class="grid grid-cols-4 gap-8">
-                                    <!-- Column 1 -->
-                                    <div class="space-y-6 animate-slide-up">
-                                        <!-- Business Analysis -->
+                            <!-- Main Content with Horizontal Layout and Vertical Scroll -->
+                            <div class="p-8">
+                                <div class="grid grid-cols-5 gap-6" style="height: 400px;">
+                                    
+                                    <!-- Column 1: Business Analysis -->
+                                    <div class="space-y-4">
                                         <div class="group/category">
-                                            <h4 class="font-semibold text-gray-800 mb-3 pb-2 border-b border-gray-200 flex items-center justify-between cursor-pointer transition-colors hover:text-primary">
+                                            <h4 class="font-bold text-gray-800 mb-4 pb-2 border-b-2 border-blue-100 flex items-center text-lg">
+                                                <i class="fas fa-chart-bar text-blue-600 mr-3"></i>
                                                 <span data-translate="business_analysis">Business Analysis</span>
-                                                <i class="fa fa-chevron-down text-xs text-gray-400 group-hover/category:text-primary transition-all duration-300"></i>
                                             </h4>
-                                            <div class="space-y-2 max-h-0 overflow-hidden group-hover/category:max-h-96 transition-all duration-500 ease-in-out">
-                                                <a href="courses/business-analysis/cbap.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">CBAP (Certified Business Analysis Professional)</a>
-                                                <a href="courses/business-analysis/ccba.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">CCBA (Certification of Capability in Business Analysis)</a>
-                                                <a href="courses/business-analysis/cpoa.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">CPOA (Certificate in Product Ownership Analysis)</a>
-                                                <a href="courses/business-analysis/cbda.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">CBDA (Certification in Business Data Analytics)</a>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Project Management -->
-                                        <div class="group/category">
-                                            <h4 class="font-semibold text-gray-800 mb-3 pb-2 border-b border-gray-200 flex items-center justify-between cursor-pointer transition-colors hover:text-primary">
-                                                <span data-translate="project_management">Project Management</span>
-                                                <i class="fa fa-chevron-down text-xs text-gray-400 group-hover/category:text-primary transition-all duration-300"></i>
-                                            </h4>
-                                            <div class="space-y-2 max-h-0 overflow-hidden group-hover/category:max-h-96 transition-all duration-500 ease-in-out">
-                                                <a href="courses/project-management/pmp.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">PMP (Project Management Professional)</a>
-                                                <a href="courses/project-management/prince2.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">PRINCE2 Foundation & Practioner</a>
-                                                <a href="courses/project-management/capm.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">CAPM (Certified Associate in Project Management)</a>
-                                                <a href="courses/project-management/p3o.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">P3O Foundation & Practioner</a>
-                                                <a href="courses/project-management/rmp.html" class="block text-sm text-gray-600 hover:text-primary hover:pl-2 rtl:hover:pl-0 rtl:hover:pr-2 transition-all duration-200 transform hover:translate-x-1 rtl:hover:-translate-x-1">RMP (Risk Management Professional)</a>
+                                            <div class="space-y-3 overflow-y-auto pr-2 custom-scrollbar" style="max-height: 320px;">
+                                                <a href="courses/business-analysis/cbap.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-blue-200">
+                                                    <div class="font-semibold">CBAP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Business Analysis Professional</div>
+                                                </a>
+                                                <a href="courses/business-analysis/ccba.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-blue-200">
+                                                    <div class="font-semibold">CCBA</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certification of Capability in Business Analysis</div>
+                                                </a>
+                                                <a href="courses/business-analysis/cpoa.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-blue-200">
+                                                    <div class="font-semibold">CPOA</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certificate in Product Ownership Analysis</div>
+                                                </a>
+                                                <a href="courses/business-analysis/cbda.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-blue-200">
+                                                    <div class="font-semibold">CBDA</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certification in Business Data Analytics</div>
+                                                </a>
+                                                <a href="courses/business-analysis/ecba.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-blue-200">
+                                                    <div class="font-semibold">ECBA</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Entry Certificate in Business Analysis</div>
+                                                </a>
+                                                <a href="courses/business-analysis/pba.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-blue-200">
+                                                    <div class="font-semibold">PBA</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Professional in Business Analysis</div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                     
-                                    <!-- More columns with similar structure... -->
-                                    <div class="space-y-6 animate-slide-up animation-delay-200">
-                                        <!-- IT Security & More categories -->
+                                    <!-- Column 2: Project Management -->
+                                    <div class="space-y-4">
+                                        <div class="group/category">
+                                            <h4 class="font-bold text-gray-800 mb-4 pb-2 border-b-2 border-green-100 flex items-center text-lg">
+                                                <i class="fas fa-project-diagram text-green-600 mr-3"></i>
+                                                <span data-translate="project_management">Project Management</span>
+                                            </h4>
+                                            <div class="space-y-3 overflow-y-auto pr-2 custom-scrollbar" style="max-height: 320px;">
+                                                <a href="courses/project-management/pmp.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-green-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-green-200">
+                                                    <div class="font-semibold">PMP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Project Management Professional</div>
+                                                </a>
+                                                <a href="courses/project-management/prince2.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-green-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-green-200">
+                                                    <div class="font-semibold">PRINCE2</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Foundation & Practitioner</div>
+                                                </a>
+                                                <a href="courses/project-management/capm.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-green-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-green-200">
+                                                    <div class="font-semibold">CAPM</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Associate in Project Management</div>
+                                                </a>
+                                                <a href="courses/project-management/p3o.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-green-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-green-200">
+                                                    <div class="font-semibold">P3O</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Portfolio, Programme & Project Offices</div>
+                                                </a>
+                                                <a href="courses/project-management/rmp.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-green-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-green-200">
+                                                    <div class="font-semibold">RMP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Risk Management Professional</div>
+                                                </a>
+                                                <a href="courses/project-management/pgmp.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-green-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-green-200">
+                                                    <div class="font-semibold">PgMP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Program Management Professional</div>
+                                                </a>
+                                                <a href="courses/project-management/pfmp.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-green-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-green-200">
+                                                    <div class="font-semibold">PfMP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Portfolio Management Professional</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Column 3: IT Security & Data Protection -->
+                                    <div class="space-y-4">
+                                        <div class="group/category">
+                                            <h4 class="font-bold text-gray-800 mb-4 pb-2 border-b-2 border-red-100 flex items-center text-lg">
+                                                <i class="fas fa-shield-alt text-red-600 mr-3"></i>
+                                                <span data-translate="it_security">IT Security</span>
+                                            </h4>
+                                            <div class="space-y-3 overflow-y-auto pr-2 custom-scrollbar" style="max-height: 320px;">
+                                                <a href="courses/it-security/itil-4.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-red-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-red-200">
+                                                    <div class="font-semibold">ITIL 4 Foundation</div>
+                                                    <div class="text-xs text-gray-500 mt-1">IT Service Management</div>
+                                                </a>
+                                                <a href="courses/it-security/cissp.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-red-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-red-200">
+                                                    <div class="font-semibold">CISSP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Information Systems Security Professional</div>
+                                                </a>
+                                                <a href="courses/it-security/cisa.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-red-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-red-200">
+                                                    <div class="font-semibold">CISA</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Information Systems Auditor</div>
+                                                </a>
+                                                <a href="courses/it-security/cism.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-red-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-red-200">
+                                                    <div class="font-semibold">CISM</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Information Security Manager</div>
+                                                </a>
+                                                <a href="courses/it-security/crisc.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-red-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-red-200">
+                                                    <div class="font-semibold">CRISC</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified in Risk and Information Systems Control</div>
+                                                </a>
+                                                <a href="courses/it-security/comptia.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-red-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-red-200">
+                                                    <div class="font-semibold">CompTIA Security+</div>
+                                                    <div class="text-xs text-gray-500 mt-1">IT Security Fundamentals</div>
+                                                </a>
+                                                <a href="courses/it-security/ccsp.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-red-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-red-200">
+                                                    <div class="font-semibold">CCSP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Cloud Security Professional</div>
+                                                </a>
+                                                <a href="courses/it-security/ceh.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-red-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-red-200">
+                                                    <div class="font-semibold">CEH</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Ethical Hacker</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Column 4: Six Sigma & Quality -->
+                                    <div class="space-y-4">
+                                        <div class="group/category">
+                                            <h4 class="font-bold text-gray-800 mb-4 pb-2 border-b-2 border-orange-100 flex items-center text-lg">
+                                                <i class="fas fa-chart-line text-orange-600 mr-3"></i>
+                                                <span data-translate="six_sigma">Six Sigma</span>
+                                            </h4>
+                                            <div class="space-y-3 overflow-y-auto pr-2 custom-scrollbar" style="max-height: 320px;">
+                                                <a href="courses/six-sigma/black-belt.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-orange-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-orange-200">
+                                                    <div class="font-semibold">Lean Six Sigma Black Belt</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Advanced Process Improvement</div>
+                                                </a>
+                                                <a href="courses/six-sigma/green-belt.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-orange-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-orange-200">
+                                                    <div class="font-semibold">Lean Six Sigma Green Belt</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Process Improvement Professional</div>
+                                                </a>
+                                                <a href="courses/six-sigma/yellow-belt.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-orange-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-orange-200">
+                                                    <div class="font-semibold">Lean Six Sigma Yellow Belt</div>
+                                                    <div class="text-xs text-gray-500 mt-1">IASSC Certified</div>
+                                                </a>
+                                                <a href="courses/six-sigma/master-black-belt.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-orange-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-orange-200">
+                                                    <div class="font-semibold">Master Black Belt</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Six Sigma Leadership</div>
+                                                </a>
+                                                <a href="courses/quality/cqe.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-orange-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-orange-200">
+                                                    <div class="font-semibold">CQE</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Quality Engineer</div>
+                                                </a>
+                                                <a href="courses/quality/cqm.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-orange-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-orange-200">
+                                                    <div class="font-semibold">CQM</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Quality Manager</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Column 5: Microsoft & Technology -->
+                                    <div class="space-y-4">
+                                        <div class="group/category">
+                                            <h4 class="font-bold text-gray-800 mb-4 pb-2 border-b-2 border-purple-100 flex items-center text-lg">
+                                                <i class="fab fa-microsoft text-purple-600 mr-3"></i>
+                                                <span data-translate="microsoft_training">Microsoft</span>
+                                            </h4>
+                                            <div class="space-y-3 overflow-y-auto pr-2 custom-scrollbar" style="max-height: 320px;">
+                                                <a href="courses/microsoft-training/microsoft-365-admin.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">Microsoft 365 Admin</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Administrator Expert</div>
+                                                </a>
+                                                <a href="courses/microsoft-training/teams-admin.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">Teams Administrator</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Associate Level</div>
+                                                </a>
+                                                <a href="courses/microsoft-training/azure-az-305.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">Azure AZ-305</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Designing Microsoft Azure Infrastructure</div>
+                                                </a>
+                                                <a href="courses/microsoft-training/devops-az-400.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">DevOps AZ-400</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Microsoft DevOps Solutions</div>
+                                                </a>
+                                                <a href="courses/cisco-training/ccnp.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">CCNP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Cisco Certified Network Professional</div>
+                                                </a>
+                                                <a href="courses/cisco-training/ccna.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">CCNA</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Cisco Certified Network Associate</div>
+                                                </a>
+                                                <a href="courses/cisco-training/ccie.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">CCIE</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Cisco Certified Internetwork Expert</div>
+                                                </a>
+                                                <a href="courses/supply-chain/cscp.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">CSCP</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Supply Chain Professional</div>
+                                                </a>
+                                                <a href="courses/supply-chain/cpim.html" class="block p-3 text-sm text-gray-700 hover:text-primary hover:bg-purple-50 rounded-lg transition-all duration-200 transform hover:scale-105 border border-transparent hover:border-purple-200">
+                                                    <div class="font-semibold">CPIM</div>
+                                                    <div class="text-xs text-gray-500 mt-1">Certified Planning & Inventory Management</div>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="bg-gray-50 px-6 py-4 border-t flex justify-between items-center">
-                                <div class="text-sm text-gray-600">
-                                    <span class="font-semibold">110+</span> <span data-translate="courses_available">courses available across</span> <span class="font-semibold">15+</span> <span data-translate="categories">categories</span>
+                            <!-- Enhanced Footer -->
+                            <div class="bg-gray-50 px-8 py-6 border-t border-gray-200 rounded-b-xl flex justify-between items-center">
+                                <div class="text-sm text-gray-600 flex items-center">
+                                    <i class="fas fa-graduation-cap text-primary mr-2"></i>
+                                    <span class="font-semibold text-lg text-primary">110+</span>
+                                    <span class="ml-1 mr-1" data-translate="courses_available">courses available across</span>
+                                    <span class="font-semibold text-lg text-primary">15+</span>
+                                    <span class="ml-1" data-translate="categories">categories</span>
                                 </div>
-                                <a href="courses/index.html" class="inline-flex items-center text-primary hover:text-blue-600 font-medium text-sm group transition-colors">
+                                <a href="courses/index.html" class="inline-flex items-center bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-sm group transition-all duration-300 transform hover:scale-105">
                                     <span data-translate="view_all_courses">View All Courses</span>
-                                    <i class="fa fa-arrow-right ml-2 rtl:ml-0 rtl:mr-2 rtl:fa-arrow-left text-xs transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1"></i>
+                                    <i class="fa fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     
-                    <a href="about-us.html" class="text-gray-700 hover:text-primary transition-all duration-300 text-sm 2xl:text-base relative group">
+                    <a href="about-us.html" class="text-gray-700 hover:text-primary transition-all duration-300 text-base 2xl:text-lg relative group font-semibold">
                         <span data-translate="about_us">About Us</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></span>
                     </a>
-                    <a href="gallery.html" class="text-gray-700 hover:text-primary transition-all duration-300 text-sm 2xl:text-base relative group">
+                    <a href="gallery.html" class="text-gray-700 hover:text-primary transition-all duration-300 text-base 2xl:text-lg relative group font-semibold">
                         <span data-translate="gallery">Gallery</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></span>
                     </a>
-                    <a href="contact-us-1.html" class="text-gray-700 hover:text-primary transition-all duration-300 text-sm 2xl:text-base relative group">
+                    <a href="contact-us-1.html" class="text-gray-700 hover:text-primary transition-all duration-300 text-base 2xl:text-lg relative group font-semibold">
                         <span data-translate="contact_us">Contact Us</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full"></span>
                     </a>
                 </nav>
                 
-                <!-- Search Bar -->
-                <div class="hidden xl:flex items-center animate-fade-in animation-delay-300">
-                    <form class="relative group">
-                        <input 
-                            type="text" 
-                            data-translate-placeholder="search_placeholder"
-                            placeholder="Type to search" 
-                            class="border border-gray-300 rounded-lg px-4 py-2 pr-10 w-64 2xl:w-72 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 focus:w-80 2xl:focus:w-96"
-                        >
-                        <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary transition-colors">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
-                </div>
-                
-                <!-- Join Now Button -->
-                <div class="hidden xl:block animate-fade-in animation-delay-400">
-                    <a href="contact-us-2.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm 2xl:text-base transform hover:scale-105 hover:shadow-lg">
-                        <i class="fas fa-graduation-cap mr-2 rtl:mr-0 rtl:ml-2"></i>
+                <!-- Join Now Button (Enhanced) -->
+                <div class="hidden xl:block">
+                    <a href="contact-us-2.html" class="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 text-base transform hover:scale-105 hover:shadow-xl shadow-lg">
+                        <i class="fas fa-graduation-cap mr-3"></i>
                         <span data-translate="join_now">Join Now</span>
                     </a>
                 </div>
                 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="xl:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 ml-2 rtl:ml-0 rtl:mr-2 group">
-                    <span class="w-6 h-0.5 bg-gray-700 transition-all duration-300 transform origin-center group-hover:bg-primary"></span>
-                    <span class="w-6 h-0.5 bg-gray-700 transition-all duration-300 group-hover:bg-primary"></span>
-                    <span class="w-6 h-0.5 bg-gray-700 transition-all duration-300 transform origin-center group-hover:bg-primary"></span>
+                <!-- Mobile Menu Button (Enhanced) -->
+                <button id="mobile-menu-btn" class="xl:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 ml-4 group focus:outline-none" aria-label="Toggle mobile menu">
+                    <span class="mobile-menu-bar w-7 h-0.5 bg-gray-700 transition-all duration-300 transform origin-center group-hover:bg-primary rounded-full"></span>
+                    <span class="mobile-menu-bar w-7 h-0.5 bg-gray-700 transition-all duration-300 group-hover:bg-primary rounded-full"></span>
+                    <span class="mobile-menu-bar w-7 h-0.5 bg-gray-700 transition-all duration-300 transform origin-center group-hover:bg-primary rounded-full"></span>
                 </button>
             </div>
         </div>
     </div>
     
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="xl:hidden bg-white border-t shadow-lg hidden animate-slide-down">
-        <!-- Mobile menu content with translations... -->
+    <!-- Mobile Menu (Keep the same as before) -->
+    <div id="mobile-menu" class="xl:hidden bg-white border-t shadow-lg hidden">
+        <div class="container mx-auto px-4 py-6 max-h-screen overflow-y-auto">
+            <!-- Mobile Navigation Content -->
+            <!-- (Keep the existing mobile menu content from the previous response) -->
+        </div>
     </div>
 </header>
