@@ -398,7 +398,34 @@ const translations = {
         faq_eligibility_question: "👉 ما هي معايير الأهلية لشهادة CBAP؟",
         faq_eligibility_answer: "خبرة العمل: ما لا يقل عن 7500 ساعة من خبرة العمل في تحليل الأعمال خلال آخر 10 سنوات.<br>مجالات المعرفة: ضمن 7500 ساعة، يجب أن تكون 900 ساعة على الأقل في أربعة من ستة مجالات معرفة BABOK.<br>التطوير المهني: ما لا يقل عن 35 ساعة من التطوير المهني في تحليل الأعمال في السنوات الأربع الماضية.<br>المراجع: مرجعان من مدير مهني أو عميل أو محلل أعمال محترف معتمد.",
         faq_duration_question: "👉 كم مدة امتحان CBAP؟",
-        faq_duration_answer: "مدة امتحان شهادة CBAP هي 3.5 ساعة (210 دقيقة)، ويتكون من 120 سؤال متعدد الخيارات. هذه الأسئلة تعتمد على دراسة الحالة وتتطلب تحليل سيناريوهات العالم الحقيقي."
+        faq_duration_answer: "مدة امتحان شهادة CBAP هي 3.5 ساعة (210 دقيقة)، ويتكون من 120 سؤال متعدد الخيارات. هذه الأسئلة تعتمد على دراسة الحالة وتتطلب تحليل سيناريوهات العالم الحقيقي.",
+        
+        // CCBA Course Page Arabic translations
+        ccba_course_title: "تفاصيل دورة CCBA",
+        ccba_hero_description: "أتقن تحليل الأعمال مع برنامج التدريب الشامل لشهادة CCBA",
+        breadcrumb_ccba: "تفاصيل دورة CCBA",
+        ccba_training_title: "تدريب CCBA",
+        ccba_description: "شهادة مجال الاختصاص في تحليل الأعمال (CCBA) هي شهادة معترف بها عالمياً لمحللي الأعمال متوسطي الخبرة، تمنحها المعهد الدولي لتحليل الأعمال (IIBA).",
+        ccba_course_description_text: "دورة CCBA هي برنامج تدريبي شامل مصمم لإعداد المرشحين لامتحان CCBA من خلال تغطية مجموعة معارف تحليل الأعمال (BABOK) الخاصة بـ IIBA مع التركيز على الممارسة والتطبيق.",
+        ccba_training_highlights_title: "أبرز نقاط التدريب والإعداد لـ CCBA:",
+        ccba_highlight_1: "احصل على <strong>25 ساعة تدريبية مع جلسات</strong> مباشرة بقيادة المدرب.",
+        ccba_highlight_2: "4 امتحانات محاكاة، <strong>مشاريع، أكثر من 150 اختبار</strong>.",
+        ccba_highlight_3: "جلسات تفاعلية مع <strong>الأنشطة العملية</strong>.",
+        ccba_highlight_4: "<strong>محاكاة العالم الحقيقي، دراسات الحالة</strong>، والمزيد.",
+        ccba_highlight_5: "<strong>مدربون خبراء</strong> مع <strong>خبرة في تحليل الأعمال</strong>.",
+        ccba_highlight_6: "<strong>الوصول إلى فصول غير محدودة</strong> مع <strong>تصريح كبير لمدة 120 يوماً</strong>.",
+        ccba_faq_benefits_question: "👉 ما هي فوائد شهادة CCBA؟",
+        ccba_faq_benefits_answer: "1. الاعتراف بمهارات تحليل الأعمال الأساسية إلى المتوسطة.<br>2. تحسين الفرص المهنية والترقي.<br>3. الوصول إلى شبكة مهنية عالمية.<br>4. إثبات الكفاءة في مجال تحليل الأعمال.",
+        ccba_faq_requirements_question: "👉 ماذا أحتاج لأصبح CCBA®؟",
+        ccba_faq_requirements_answer: "1. إكمال ما لا يقل عن 3750 ساعة من خبرة عمل تحليل الأعمال في آخر 7 سنوات.<br>2. ضمن هذه الخبرة، ما لا يقل عن 500 ساعة مكتملة في 4 من 6 مجالات معرفة دليل BABOK®.<br>3. إكمال ما لا يقل عن 21 ساعة من التطوير المهني في آخر 4 سنوات.<br>4. تقديم مرجعين.<br>5. الموافقة على مدونة السلوك.<br>6. اجتياز الامتحان.",
+        ccba_faq_process_question: "👉 ما هي عملية الحصول على شهادة CCBA؟",
+        ccba_faq_process_answer: "الخطوة 1. تلبية متطلبات الأهلية.<br>الخطوة 2. التقديم للامتحان.<br>الخطوة 3. التحضير وأداء الامتحان.",
+        ccba_faq_fee_question: "👉 ما هي رسوم امتحان CCBA؟",
+        ccba_faq_fee_answer: "رسوم امتحان CCBA هي 325 دولار أمريكي لأعضاء IIBA و450 دولار أمريكي لغير الأعضاء. بالإضافة إلى ذلك، هناك رسوم طلب غير قابلة للاسترداد قدرها 125 دولار أمريكي مطلوبة وقت تقديم الطلب.",
+        ccba_faq_eligibility_question: "👉 ما هي معايير الأهلية لشهادة CCBA؟",
+        ccba_faq_eligibility_answer: "خبرة العمل: ما لا يقل عن 3750 ساعة من خبرة العمل في تحليل الأعمال خلال آخر 7 سنوات.<br>مجالات المعرفة: ضمن 3750 ساعة، يجب أن تكون 500 ساعة على الأقل في أربعة من ستة مجالات معرفة BABOK.<br>التطوير المهني: ما لا يقل عن 21 ساعة من التطوير المهني في تحليل الأعمال في السنوات الأربع الماضية.<br>المراجع: مرجعان من مدير مهني أو عميل أو محلل أعمال محترف معتمد.",
+        ccba_faq_duration_question: "👉 كم مدة امتحان CCBA؟",
+        ccba_faq_duration_answer: "مدة امتحان شهادة CCBA هي 3.5 ساعة (210 دقيقة)، ويتكون من 130 سؤال متعدد الخيارات. هذه الأسئلة تعتمد على السيناريوهات وتتطلب فهم مفاهيم تحليل الأعمال."
     }
 };
 
@@ -411,11 +438,14 @@ class ComponentLoader {
         this.currentDirection = this.currentLanguage === 'ar' ? 'rtl' : 'ltr';
     }
 
-    async loadComponent(componentId, componentPath, callback = null) {
+    async loadComponent(componentId, componentPath, callback = null, errorCallback = null) {
         try {
             const element = document.getElementById(componentId);
             if (!element) {
                 console.error(`Element with ID '${componentId}' not found`);
+                if (errorCallback && typeof errorCallback === 'function') {
+                    errorCallback(new Error(`Element with ID '${componentId}' not found`));
+                }
                 return false;
             }
 
@@ -445,6 +475,11 @@ class ComponentLoader {
         } catch (error) {
             console.error(`Error loading component ${componentId}:`, error);
             document.getElementById(componentId).innerHTML = this.getErrorHTML(componentId, error.message);
+            
+            if (errorCallback && typeof errorCallback === 'function') {
+                errorCallback(error);
+            }
+            
             return false;
         }
     }
@@ -524,6 +559,7 @@ class ComponentLoader {
 
     // Language Management
     applyLanguage(lang) {
+        console.log(`🌐 Applying language: ${lang}`);
         this.currentLanguage = lang;
         localStorage.setItem('language', lang);
         
@@ -531,18 +567,29 @@ class ComponentLoader {
         this.applyDirection(direction);
         
         // Update all translated elements
-        document.querySelectorAll('[data-translate]').forEach(element => {
+        const translatedElements = document.querySelectorAll('[data-translate]');
+        console.log(`Found ${translatedElements.length} elements with data-translate`);
+        
+        translatedElements.forEach(element => {
             const key = element.getAttribute('data-translate');
             if (translations[lang] && translations[lang][key]) {
-                element.textContent = translations[lang][key];
+                const translation = translations[lang][key];
+                element.innerHTML = translation; // Use innerHTML to support HTML content
+                console.log(`Translated "${key}" to: ${translation.substring(0, 50)}...`);
+            } else {
+                console.warn(`Translation missing for key "${key}" in language "${lang}"`);
             }
         });
         
         // Update placeholder texts
-        document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+        const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+        console.log(`Found ${placeholderElements.length} elements with data-translate-placeholder`);
+        
+        placeholderElements.forEach(element => {
             const key = element.getAttribute('data-translate-placeholder');
             if (translations[lang] && translations[lang][key]) {
                 element.setAttribute('placeholder', translations[lang][key]);
+                console.log(`Updated placeholder for "${key}"`);
             }
         });
         
@@ -550,12 +597,13 @@ class ComponentLoader {
         const currentLangElement = document.getElementById('current-language');
         if (currentLangElement) {
             currentLangElement.textContent = lang === 'ar' ? 'العربية' : 'English';
+            console.log('Updated current language display');
         }
         
         // Update document language
         document.documentElement.lang = lang;
         
-        console.log(`Language switched to: ${lang}`);
+        console.log(`✅ Language switched to: ${lang}`);
     }
 
     applyDirection(direction) {
@@ -576,23 +624,49 @@ class ComponentLoader {
     }
 
     initializeLanguageToggle() {
-        // Language selector functionality
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', (e) => {
-                e.preventDefault();
-                const lang = e.currentTarget.getAttribute('data-lang');
-                const dir = e.currentTarget.getAttribute('data-dir');
-                
-                this.applyLanguage(lang);
-                this.applyDirection(dir);
-                
-                // Add smooth transition effect
-                document.body.style.transition = 'all 0.3s ease';
-                setTimeout(() => {
-                    document.body.style.transition = '';
-                }, 300);
+        console.log('Initializing language toggle...');
+        
+        // Wait for DOM elements to be available
+        const initLanguageEvents = () => {
+            const languageOptions = document.querySelectorAll('.language-option');
+            console.log('Found language options:', languageOptions.length);
+            
+            if (languageOptions.length === 0) {
+                console.warn('No language options found, retrying in 500ms...');
+                setTimeout(initLanguageEvents, 500);
+                return;
+            }
+            
+            // Language selector functionality
+            languageOptions.forEach(option => {
+                console.log('Adding event listener to:', option.getAttribute('data-lang'));
+                option.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = e.currentTarget.getAttribute('data-lang');
+                    const dir = e.currentTarget.getAttribute('data-dir');
+                    
+                    console.log(`Language switch clicked: ${lang} (${dir})`);
+                    
+                    this.applyLanguage(lang);
+                    this.applyDirection(dir);
+                    
+                    // Add smooth transition effect
+                    document.body.style.transition = 'all 0.3s ease';
+                    setTimeout(() => {
+                        document.body.style.transition = '';
+                    }, 300);
+                });
             });
-        });
+            
+            console.log('✅ Language toggle events initialized successfully');
+        };
+        
+        // Try to initialize immediately, or wait for DOM
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initLanguageEvents);
+        } else {
+            initLanguageEvents();
+        }
     }
 
     initializeAnimations() {

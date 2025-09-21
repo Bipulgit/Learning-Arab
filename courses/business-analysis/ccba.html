@@ -3,29 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCBA Course Details - SanMark Learning</title>
     
-    <!-- Tailwind CSS CDN with Brand Colors Config -->
+    <!-- SEO Meta Tags -->
+    <title>CCBA Certification Training Course 2025 | SanMark Learning</title>
+    <meta name="description" content="Master CCBA certification with comprehensive training. 30+ hours, expert instructors, practice exams. $399 self-paced, $699 live training. Enroll now!">
+    <meta name="keywords" content="CCBA certification, business analysis course, IIBA certification, business analyst training, CCBA exam preparation">
+    <meta name="author" content="SanMark Learning">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CCBA Certification Training Course | SanMark Learning">
+    <meta property="og:description" content="Master CCBA certification with comprehensive training. Expert instructors, 30+ hours, practice exams. Start your business analysis career today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sanmarklearning.com/courses/ccba-certification">
+    <meta property="og:image" content="https://www.sanmarklearning.com/assets/images/courses/ccba-course.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CCBA Certification Training Course | SanMark Learning">
+    <meta name="twitter:description" content="Master CCBA certification with comprehensive training. Expert instructors, 30+ hours, practice exams.">
+    <meta name="twitter:image" content="https://www.sanmarklearning.com/assets/images/courses/ccba-course.jpg">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "CCBA Certification Training Course",
+        "description": "Comprehensive CCBA certification training covering all BABOK knowledge areas with expert instructors and practical exercises.",
+        "provider": {
+            "@type": "Organization",
+            "name": "SanMark Learning",
+            "url": "https://www.sanmarklearning.com"
+        },
+        "courseCode": "CCBA-2025",
+        "educationalLevel": "Intermediate",
+        "numberOfCredits": 30,
+        "timeRequired": "P30H",
+        "coursePrerequisites": "3750 hours of business analysis experience",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.1",
+            "reviewCount": "49"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Self-Paced Training",
+                "price": "399",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Live Online Training",
+                "price": "699",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.sanmarklearning.com/courses/ccba-certification">
+    
+    <!-- Tailwind CSS with Brand Colors -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        // Main Brand Colors
-                        primary: '#4c1864',
-                        'primary-light': '#8b3d91',
-                        'primary-dark': '#3a1249',
-                        
-                        secondary: '#4d0a91',
-                        'secondary-light': '#7a2eb8',
-                        'secondary-dark': '#380770',
-                        
-                        accent: '#f7b205',
-                        'accent-light': '#fdc235',
-                        'accent-dark': '#d49504',
-                        
-                        // Extended Brand Palette
+                        primary: '#4c1864', secondary: '#4d0a91', accent: '#f7b205',
                         brand: {
                             50: '#faf7fc', 100: '#f3ebf8', 200: '#e5d1ed', 300: '#d4ace0', 400: '#b976c9',
                             500: '#4c1864', 600: '#3d1350', 700: '#310f3f', 800: '#260b2e', 900: '#1a081d'
@@ -41,12 +91,15 @@
                     },
                     backgroundImage: {
                         'gradient-primary': 'linear-gradient(135deg, #4c1864, #4d0a91)',
-                        'gradient-accent': 'linear-gradient(135deg, #f7b205, #ff8f00)',
                         'gradient-hero': 'linear-gradient(135deg, #4c1864, #4d0a91, #6b21a8)'
                     },
-                    boxShadow: {
-                        'brand': '0 10px 25px -5px rgba(76, 24, 100, 0.3)',
-                        'accent': '0 10px 25px -5px rgba(247, 178, 5, 0.3)'
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'fade-up': 'fadeUp 0.6s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }
                     }
                 }
             }
@@ -54,182 +107,207 @@
     </script>
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Simple Animation Styles -->
+    <style>
+        .fade-in { opacity: 0; animation: fadeIn 0.6s ease-out forwards; }
+        .fade-up { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-2px); }
+    </style>
 </head>
 
-<body class="font-sans antialiased">
-    <!-- Include your header component -->
-    <!-- header.html content goes here -->
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Include Header -->
+    <!-- Your header.html content goes here -->
+     <!-- header.html content goes here -->
      <div id="header"></div>
 
-    <div class="page-wrapper min-h-screen bg-gray-50">
+    <div class="page-wrapper min-h-screen">
         <div class="page-content bg-white">
             
-            <!-- Modern Hero Banner -->
-            <div class="relative bg-gradient-hero py-20 lg:py-32 overflow-hidden">
-                <!-- Background Pattern -->
+            <!-- Hero Section -->
+            <div class="relative bg-gradient-hero py-16 lg:py-24 overflow-hidden">
                 <div class="absolute inset-0 opacity-10">
-                    <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-                        <defs>
-                            <pattern id="hero-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <circle cx="2" cy="2" r="1" fill="white" opacity="0.3"/>
-                                <circle cx="18" cy="18" r="1" fill="white" opacity="0.2"/>
-                            </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill="url(#hero-pattern)"/>
-                    </svg>
+                    <div class="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-pulse"></div>
+                    <div class="absolute top-40 right-20 w-6 h-6 bg-accent/30 rounded-full animate-pulse"></div>
+                    <div class="absolute bottom-32 left-1/4 w-3 h-3 bg-white/15 rounded-full animate-pulse"></div>
                 </div>
                 
-                <!-- Hero Content -->
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="max-w-4xl mx-auto text-center">
-                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20 fade-in">
                             <i class="fas fa-chart-bar text-accent mr-3"></i>
                             <span class="text-white font-medium" data-translate="business_analysis_course">Business Analysis Course</span>
                         </div>
                         
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-translate="ccba_course_title">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight fade-in" data-translate="ccba_course_title" style="animation-delay: 0.1s">
                             CCBA Course Details
                         </h1>
                         
-                        <p class="text-xl text-brand-100 max-w-2xl mx-auto" data-translate="ccba_hero_description">
+                        <p class="text-xl text-brand-100 max-w-2xl mx-auto mb-8 fade-in" data-translate="ccba_hero_description" style="animation-delay: 0.2s">
                             Master foundational business analysis skills with our comprehensive CCBA certification training
                         </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in" style="animation-delay: 0.3s">
+                            <button class="bg-accent hover:bg-accent-dark text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover-lift">
+                                <span data-translate="enroll_now">Enroll Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            <button class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/30 hover:bg-white/20 transition-all duration-300">
+                                <span data-translate="download_brochure">Download Brochure</span>
+                                <i class="fas fa-download ml-2"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Modern Breadcrumb -->
-            <div class="bg-white border-b border-gray-200">
-                <div class="container mx-auto px-4 py-4">
-                    <nav class="flex items-center space-x-2 text-sm">
-                        <a href="/" class="text-primary hover:text-primary-dark font-medium transition-colors duration-200" data-translate="breadcrumb_home">
-                            Home
-                        </a>
-                        <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
-                        <a href="/courses" class="text-primary hover:text-primary-dark font-medium transition-colors duration-200" data-translate="breadcrumb_courses">
-                            Courses
-                        </a>
-                        <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
-                        <span class="text-gray-700" data-translate="breadcrumb_ccba">CCBA Course Details</span>
-                    </nav>
+            <!-- Breadcrumb -->
+            <nav class="bg-white border-b border-gray-200 py-4 fade-in">
+                <div class="container mx-auto px-4">
+                    <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a href="/" class="text-primary hover:text-primary-dark transition-colors" itemprop="item">
+                                <span itemprop="name" data-translate="breadcrumb_home">Home</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li><i class="fas fa-chevron-right text-gray-400 text-xs mx-2"></i></li>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a href="/courses" class="text-primary hover:text-primary-dark transition-colors" itemprop="item">
+                                <span itemprop="name" data-translate="breadcrumb_courses">Courses</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        <li><i class="fas fa-chevron-right text-gray-400 text-xs mx-2"></i></li>
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span class="text-gray-700" itemprop="name" data-translate="breadcrumb_ccba">CCBA Course Details</span>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ol>
                 </div>
-            </div>
+            </nav>
 
             <!-- Main Content -->
-            <div class="container mx-auto px-4 py-12 lg:py-20">
+            <main class="container mx-auto px-4 py-12 lg:py-20">
                 <div class="flex flex-col lg:flex-row gap-12">
                     
-                    <!-- Right Sidebar -->
-                    <div class="lg:w-1/3 order-first lg:order-last">
-                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden sticky top-8">
+                    <!-- Sidebar -->
+                    <aside class="lg:w-1/3 order-first lg:order-last">
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden sticky top-8 fade-up">
                             
-                            <!-- Pricing Header -->
-                            <div class="bg-gradient-primary p-8 text-white text-center">
+                            <!-- Form Header -->
+                            <header class="bg-gradient-primary p-8 text-white text-center">
                                 <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                                     <i class="fas fa-info-circle text-2xl"></i>
                                 </div>
-                                <h3 class="text-2xl font-bold mb-2" data-translate="request_information_title">
-                                    Request for Information
-                                </h3>
-                            </div>
+                                <h2 class="text-2xl font-bold mb-2" data-translate="request_information_title">Request for Information</h2>
+                            </header>
 
                             <!-- Contact Form -->
                             <div class="p-8">
                                 <form id="contactForm" method="POST" action="../../coursesemail.php" class="space-y-6">
                                     <div class="space-y-4">
                                         <div>
+                                            <label for="name" class="sr-only" data-translate="form_name_label">Full Name</label>
                                             <input type="text" 
                                                    id="name" 
                                                    name="name" 
-                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                                                    placeholder="Enter your Name" 
                                                    data-translate-placeholder="form_name_placeholder"
-                                                   required>
+                                                   required 
+                                                   autocomplete="name">
                                         </div>
                                         
                                         <div>
+                                            <label for="email" class="sr-only" data-translate="form_email_label">Email Address</label>
                                             <input type="email" 
                                                    id="email" 
                                                    name="email" 
-                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                                                    placeholder="Enter your Email" 
                                                    data-translate-placeholder="form_email_placeholder"
-                                                   required>
+                                                   required 
+                                                   autocomplete="email">
                                         </div>
                                         
                                         <div>
+                                            <label for="mobile" class="sr-only" data-translate="form_mobile_label">Phone Number</label>
                                             <input type="tel" 
                                                    id="mobile" 
                                                    name="mobile" 
-                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
                                                    placeholder="Enter your Mobile No" 
                                                    data-translate-placeholder="form_mobile_placeholder"
-                                                   required>
+                                                   required 
+                                                   autocomplete="tel">
                                         </div>
                                         
                                         <div>
+                                            <label for="query" class="sr-only" data-translate="form_query_label">Your Message</label>
                                             <textarea id="query" 
                                                       name="query" 
                                                       rows="4"
-                                                      class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white resize-none"
+                                                      class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
                                                       placeholder="Enter your Query" 
                                                       data-translate-placeholder="form_query_placeholder"
                                                       required></textarea>
                                         </div>
                                     </div>
                                     
-                                    <!-- Button with Accent Color -->
                                     <button type="submit" 
-                                            class="w-full bg-accent hover:bg-accent-dark text-gray-900 font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-accent">
+                                            class="w-full bg-accent hover:bg-accent-dark text-gray-900 font-semibold py-4 px-6 rounded-xl transition-all duration-300 hover-lift">
                                         <span data-translate="form_request_button">Request Information</span>
-                                        <i class="fas fa-arrow-right ml-2"></i>
+                                        <i class="fas fa-paper-plane ml-2"></i>
                                     </button>
                                 </form>
                                 
-                                <!-- Loader -->
                                 <div id="loader" class="hidden text-center mt-6">
                                     <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent"></div>
                                     <p class="mt-4 text-gray-600" data-translate="form_sending_message">Sending your message...</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </aside>
 
                     <!-- Main Content Area -->
-                    <div class="lg:w-2/3">
+                    <section class="lg:w-2/3">
                         
                         <!-- Course Header -->
-                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
-                            <div class="flex items-start space-x-6 mb-8">
+                        <article class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12 hover-lift fade-up">
+                            <header class="flex items-start space-x-6 mb-8">
                                 <div class="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0">
                                     <i class="fas fa-chart-bar text-2xl text-white"></i>
                                 </div>
-                                <div>
-                                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-translate="ccba_training_title">
+                                <div class="flex-1">
+                                    <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-translate="ccba_training_title">
                                         CCBA Training
-                                    </h2>
+                                    </h1>
                                     <p class="text-lg text-gray-600 leading-relaxed" data-translate="ccba_description">
-                                        The CCBA (Certification of Competency in Business Analysis) is a professional certification offered by the International Institute of Business Analysis (IIBA). It is designed for business analysis professionals who are looking to validate their knowledge and skills in the field of business analysis.
+                                        The CCBA (Certification of Competency in Business Analysis) is a professional certification offered by the International Institute of Business Analysis (IIBA). It is designed for business analysis professionals who are looking to validate their knowledge and skills in the field of business analysis. The CCBA certification is ideal for those with some experience in business analysis who want to demonstrate their ability to apply foundational business analysis knowledge in real-world scenarios.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
+                            </header>
+                        </article>
 
                         <!-- Course Overview -->
-                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
-                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="overview_title">
+                        <section class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12 hover-lift fade-up">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="overview_title">
                                 Overview
-                            </h3>
+                            </h2>
                             
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                                 <!-- Course Features -->
                                 <div>
-                                    <h4 class="text-xl font-semibold text-gray-900 mb-6" data-translate="course_features_title">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-6" data-translate="course_features_title">
                                         Course Features
-                                    </h4>
+                                    </h3>
                                     <div class="space-y-4">
-                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover-lift">
                                             <div class="flex items-center">
                                                 <i class="fas fa-book text-primary mr-3"></i>
                                                 <span class="text-gray-700 font-medium" data-translate="lectures_label">Lectures</span>
@@ -237,7 +315,7 @@
                                             <span class="text-gray-900 font-bold" data-translate="ccba_lectures_value">10-12</span>
                                         </div>
                                         
-                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover-lift">
                                             <div class="flex items-center">
                                                 <i class="fas fa-question-circle text-secondary mr-3"></i>
                                                 <span class="text-gray-700 font-medium" data-translate="quizzes_label">Quizzes</span>
@@ -245,7 +323,7 @@
                                             <span class="text-gray-900 font-bold" data-translate="ccba_quizzes_value">Yes</span>
                                         </div>
                                         
-                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover-lift">
                                             <div class="flex items-center">
                                                 <i class="fas fa-clock text-accent mr-3"></i>
                                                 <span class="text-gray-700 font-medium" data-translate="duration_label">Duration</span>
@@ -253,33 +331,33 @@
                                             <span class="text-gray-900 font-bold" data-translate="ccba_duration_value">30 hours</span>
                                         </div>
                                         
-                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover-lift">
                                             <div class="flex items-center">
-                                                <i class="fas fa-signal text-primary-light mr-3"></i>
+                                                <i class="fas fa-signal text-green-600 mr-3"></i>
                                                 <span class="text-gray-700 font-medium" data-translate="skill_level_label">Skill Level</span>
                                             </div>
                                             <span class="text-gray-900 font-bold" data-translate="ccba_skill_level_value">Beginner</span>
                                         </div>
                                         
-                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover-lift">
                                             <div class="flex items-center">
-                                                <i class="fas fa-language text-secondary-light mr-3"></i>
+                                                <i class="fas fa-language text-blue-600 mr-3"></i>
                                                 <span class="text-gray-700 font-medium" data-translate="language_label">Language</span>
                                             </div>
                                             <span class="text-gray-900 font-bold" data-translate="ccba_language_value">English</span>
                                         </div>
                                         
-                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover-lift">
                                             <div class="flex items-center">
-                                                <i class="fas fa-users text-primary mr-3"></i>
+                                                <i class="fas fa-users text-purple-600 mr-3"></i>
                                                 <span class="text-gray-700 font-medium" data-translate="students_label">Students</span>
                                             </div>
                                             <span class="text-gray-900 font-bold" data-translate="ccba_students_value">15-20</span>
                                         </div>
                                         
-                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover-lift">
                                             <div class="flex items-center">
-                                                <i class="fas fa-check-square text-secondary mr-3"></i>
+                                                <i class="fas fa-check-square text-green-600 mr-3"></i>
                                                 <span class="text-gray-700 font-medium" data-translate="assessments_label">Assessments</span>
                                             </div>
                                             <span class="text-gray-900 font-bold" data-translate="ccba_assessments_value">Yes</span>
@@ -289,16 +367,16 @@
 
                                 <!-- Course Description -->
                                 <div>
-                                    <h4 class="text-xl font-semibold text-gray-900 mb-6" data-translate="course_description_title">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-6" data-translate="course_description_title">
                                         Course Description
-                                    </h4>
+                                    </h3>
                                     <p class="text-gray-600 leading-relaxed mb-6" data-translate="ccba_course_description_text">
-                                        The CCBA course provides a comprehensive introduction to the essential concepts, techniques, and processes involved in business analysis. The course is designed to prepare individuals for the CCBA certification exam by covering the Business Analysis Body of Knowledge (BABOK).
+                                        The CCBA course provides a comprehensive introduction to the essential concepts, techniques, and processes involved in business analysis. The course is designed to prepare individuals for the CCBA certification exam by covering the Business Analysis Body of Knowledge (BABOK), which is the standard framework for business analysis professionals. Topics covered in the course include requirements gathering, stakeholder management, business process modeling, solution assessment, and business analysis tools and techniques. The training focuses on equipping individuals with the necessary skills to help organizations define business needs, analyze requirements, and implement solutions that improve business outcomes.
                                     </p>
                                     
-                                    <h5 class="text-lg font-semibold text-primary mb-4" data-translate="ccba_training_highlights_title">
+                                    <h4 class="text-lg font-semibold text-primary mb-4" data-translate="ccba_training_highlights_title">
                                         CCBA Training & Preparation Highlights:
-                                    </h5>
+                                    </h4>
                                     
                                     <ul class="space-y-3">
                                         <li class="flex items-start">
@@ -340,18 +418,18 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
-                        <!-- Pricing Cards -->
-                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
-                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 text-center" data-translate="pricing_options_title">
+                        <!-- Pricing Options -->
+                        <section class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12 hover-lift fade-up">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 text-center" data-translate="pricing_options_title">
                                 Pricing Options
-                            </h3>
+                            </h2>
                             
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                                 
                                 <!-- Self Paced Training -->
-                                <div class="relative bg-gradient-to-br from-brand-50 to-brand-secondary-50 border-2 border-brand-200 rounded-3xl p-8 hover:shadow-brand transition-all duration-300 hover:scale-105">
+                                <div class="relative bg-gradient-to-br from-brand-50 to-brand-secondary-50 border-2 border-brand-200 rounded-3xl p-8 hover-lift transition-all duration-300">
                                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
                                         <span class="bg-gradient-primary text-white px-6 py-2 rounded-full text-sm font-bold" data-translate="self_paced_badge">
                                             SELF PACED TRAINING
@@ -404,11 +482,15 @@
                                                 <span class="text-3xl font-bold text-accent ml-2">$399</span>
                                             </div>
                                         </div>
+                                        
+                                        <button class="w-full mt-6 bg-gradient-primary text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 hover-lift">
+                                            <span data-translate="choose_self_paced">Choose Self-Paced</span>
+                                        </button>
                                     </div>
                                 </div>
 
                                 <!-- Live Online Training -->
-                                <div class="relative bg-gradient-to-br from-brand-secondary-50 to-brand-50 border-2 border-brand-secondary-200 rounded-3xl p-8 hover:shadow-brand transition-all duration-300 hover:scale-105">
+                                <div class="relative bg-gradient-to-br from-brand-secondary-50 to-brand-50 border-2 border-brand-secondary-200 rounded-3xl p-8 hover-lift transition-all duration-300">
                                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
                                         <span class="bg-gradient-to-r from-secondary to-primary text-white px-6 py-2 rounded-full text-sm font-bold" data-translate="live_training_badge">
                                             LIVE ONLINE TRAINING
@@ -461,23 +543,27 @@
                                                 <span class="text-3xl font-bold text-accent ml-2">$699</span>
                                             </div>
                                         </div>
+                                        
+                                        <button class="w-full mt-6 bg-gradient-to-r from-secondary to-primary text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 hover-lift">
+                                            <span data-translate="choose_live_training">Choose Live Training</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
                         <!-- FAQ Section -->
-                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
-                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="exam_certification_title">
+                        <section class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12 hover-lift fade-up">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="exam_certification_title">
                                 About exam & certification details:
-                            </h3>
+                            </h2>
                             
                             <div class="space-y-6">
                                 <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
                                     <summary class="flex items-center justify-between cursor-pointer">
-                                        <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="ccba_faq_process_question">
+                                        <h3 class="text-lg font-semibold text-gray-900 pr-4" data-translate="ccba_faq_process_question">
                                             👉 What is the Process to Get CCBA Certified ?
-                                        </h4>
+                                        </h3>
                                         <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform duration-200"></i>
                                     </summary>
                                     <div class="mt-4 pt-4 border-t border-gray-200">
@@ -492,9 +578,9 @@
 
                                 <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
                                     <summary class="flex items-center justify-between cursor-pointer">
-                                        <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="ccba_faq_fee_question">
+                                        <h3 class="text-lg font-semibold text-gray-900 pr-4" data-translate="ccba_faq_fee_question">
                                             👉 What is the Exam Fee for CCBA Exam?
-                                        </h4>
+                                        </h3>
                                         <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform duration-200"></i>
                                     </summary>
                                     <div class="mt-4 pt-4 border-t border-gray-200">
@@ -506,9 +592,9 @@
 
                                 <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
                                     <summary class="flex items-center justify-between cursor-pointer">
-                                        <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="ccba_faq_eligibility_question">
+                                        <h3 class="text-lg font-semibold text-gray-900 pr-4" data-translate="ccba_faq_eligibility_question">
                                             👉 What is the Eligibility Criteria for CCBA Certification ?
-                                        </h4>
+                                        </h3>
                                         <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform duration-200"></i>
                                     </summary>
                                     <div class="mt-4 pt-4 border-t border-gray-200">
@@ -522,9 +608,9 @@
 
                                 <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
                                     <summary class="flex items-center justify-between cursor-pointer">
-                                        <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="ccba_faq_duration_question">
+                                        <h3 class="text-lg font-semibold text-gray-900 pr-4" data-translate="ccba_faq_duration_question">
                                             👉 How Long is the CCBA Exam Duration ?
-                                        </h4>
+                                        </h3>
                                         <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform duration-200"></i>
                                     </summary>
                                     <div class="mt-4 pt-4 border-t border-gray-200">
@@ -534,71 +620,71 @@
                                     </div>
                                 </details>
                             </div>
-                        </div>
+                        </section>
 
                         <!-- Curriculum -->
-                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
-                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="curriculum_title">
+                        <section class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12 hover-lift fade-up">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="curriculum_title">
                                 Curriculum
-                            </h3>
+                            </h2>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-6 border border-brand-200">
-                                    <h5 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_1">
+                                <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-6 border border-brand-200 hover-lift">
+                                    <h3 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_1">
                                         <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm mr-3">1</span>
                                         Business Analysis Planning and Monitoring
-                                    </h5>
+                                    </h3>
                                 </div>
                                 
-                                <div class="bg-gradient-to-br from-brand-secondary-50 to-brand-secondary-100 rounded-2xl p-6 border border-brand-secondary-200">
-                                    <h5 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_2">
+                                <div class="bg-gradient-to-br from-brand-secondary-50 to-brand-secondary-100 rounded-2xl p-6 border border-brand-secondary-200 hover-lift">
+                                    <h3 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_2">
                                         <span class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center text-sm mr-3">2</span>
                                         Elicitation and Collaboration
-                                    </h5>
+                                    </h3>
                                 </div>
                                 
-                                <div class="bg-gradient-to-br from-brand-accent-50 to-brand-accent-100 rounded-2xl p-6 border border-brand-accent-200">
-                                    <h5 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_3">
+                                <div class="bg-gradient-to-br from-brand-accent-50 to-brand-accent-100 rounded-2xl p-6 border border-brand-accent-200 hover-lift">
+                                    <h3 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_3">
                                         <span class="w-8 h-8 bg-accent text-gray-900 rounded-full flex items-center justify-center text-sm mr-3">3</span>
                                         Requirements Life Cycle Management
-                                    </h5>
+                                    </h3>
                                 </div>
                                 
-                                <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-6 border border-brand-200">
-                                    <h5 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_4">
+                                <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-6 border border-brand-200 hover-lift">
+                                    <h3 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_4">
                                         <span class="w-8 h-8 bg-primary-dark text-white rounded-full flex items-center justify-center text-sm mr-3">4</span>
                                         Strategy Analysis
-                                    </h5>
+                                    </h3>
                                 </div>
                                 
-                                <div class="bg-gradient-to-br from-brand-secondary-50 to-brand-secondary-100 rounded-2xl p-6 border border-brand-secondary-200">
-                                    <h5 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_5">
+                                <div class="bg-gradient-to-br from-brand-secondary-50 to-brand-secondary-100 rounded-2xl p-6 border border-brand-secondary-200 hover-lift">
+                                    <h3 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_5">
                                         <span class="w-8 h-8 bg-secondary-dark text-white rounded-full flex items-center justify-center text-sm mr-3">5</span>
                                         Requirements Analysis and Design Definition
-                                    </h5>
+                                    </h3>
                                 </div>
                                 
-                                <div class="bg-gradient-to-br from-brand-accent-50 to-brand-accent-100 rounded-2xl p-6 border border-brand-accent-200">
-                                    <h5 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_6">
+                                <div class="bg-gradient-to-br from-brand-accent-50 to-brand-accent-100 rounded-2xl p-6 border border-brand-accent-200 hover-lift">
+                                    <h3 class="font-semibold text-gray-900 flex items-center" data-translate="ccba_module_6">
                                         <span class="w-8 h-8 bg-accent-dark text-white rounded-full flex items-center justify-center text-sm mr-3">6</span>
                                         Solution Evaluation
-                                    </h5>
+                                    </h3>
                                 </div>
                                 
-                                <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-6 border border-brand-200 md:col-span-2">
-                                    <h5 class="font-semibold text-gray-900 flex items-center justify-center" data-translate="ccba_module_7">
+                                <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-6 border border-brand-200 md:col-span-2 hover-lift">
+                                    <h3 class="font-semibold text-gray-900 flex items-center justify-center" data-translate="ccba_module_7">
                                         <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm mr-3">7</span>
                                         Underlying Competencies
-                                    </h5>
+                                    </h3>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
                         <!-- Reviews -->
-                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12">
-                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="reviews_title">
+                        <section class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 fade-up">
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="reviews_title">
                                 Reviews
-                            </h3>
+                            </h2>
                             
                             <div class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-brand-50 to-brand-secondary-50 rounded-2xl p-8">
                                 <div class="text-center md:text-left mb-6 md:mb-0">
@@ -618,26 +704,27 @@
                                 </div>
                                 
                                 <div class="text-center md:text-right">
-                                    <h4 class="text-3xl font-bold text-primary" data-translate="provider_name">SanMark Learning</h4>
+                                    <h3 class="text-3xl font-bold text-primary" data-translate="provider_name">SanMark Learning</h3>
                                     <p class="text-gray-600" data-translate="trusted_provider">Trusted Training Provider</p>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
                 </div>
-            </div>
+            </main>
 
             <!-- Back to Top Button -->
-            <button class="fixed bottom-8 right-8 bg-primary hover:bg-primary-dark text-white w-12 h-12 rounded-full shadow-brand transition-all duration-300 transform hover:scale-110 z-50" 
-                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <button id="backToTop" class="fixed bottom-8 right-8 bg-primary hover:bg-primary-dark text-white w-12 h-12 rounded-full shadow-lg transition-all duration-300 hover-lift z-50 opacity-0 invisible" 
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                    aria-label="Back to top">
                 <i class="fas fa-chevron-up"></i>
             </button>
         </div>
     </div>
 
-    <!-- Include your footer component -->
-    <!-- footer.html content goes here -->
+    <!-- Include Footer -->
+    <!-- Your footer.html content goes here -->
      <!-- Footer Container -->
     <div id="footer"></div>
 
@@ -658,14 +745,35 @@
             let componentsLoaded = 0;
             const totalComponents = 2;
             
+            // Initialize language system immediately (independent of component loading)
+            function initializeLanguageSystem() {
+                console.log('Attempting to initialize language system...');
+                console.log('ComponentLoader available:', !!window.componentLoader);
+                console.log('initializeLanguageToggle available:', !!(window.componentLoader && window.componentLoader.initializeLanguageToggle));
+                
+                if (window.componentLoader && typeof window.componentLoader.initializeLanguageToggle === 'function') {
+                    try {
+                        window.componentLoader.initializeLanguageToggle();
+                        console.log('✅ Language system initialized successfully');
+                    } catch (error) {
+                        console.error('❌ Error initializing language system:', error);
+                    }
+                } else {
+                    console.warn('⚠️ Language toggle function not available yet, will retry after components load');
+                }
+            }
+            
             function onComponentLoaded() {
                 componentsLoaded++;
                 if (componentsLoaded === totalComponents) {
                     console.log('All components loaded successfully');
-                    // Ensure language system is properly initialized
-                    if (window.componentLoader) {
-                        window.componentLoader.initializeLanguageToggle();
-                        window.componentLoader.initializeHeader(); // Initialize mobile menu functionality
+                    
+                    // Initialize language system after components are loaded
+                    initializeLanguageSystem();
+                    
+                    // Initialize header functionality (mobile menu)
+                    if (window.componentLoader && typeof window.componentLoader.initializeHeader === 'function') {
+                        window.componentLoader.initializeHeader();
                     }
                     
                     // Initialize form validation if available
@@ -674,6 +782,15 @@
                     }
                 }
             }
+            
+            // Try to initialize language system early (in case components.js is already loaded)
+            setTimeout(initializeLanguageSystem, 100);
+            
+            // Try again after a bit longer delay
+            setTimeout(initializeLanguageSystem, 1000);
+            
+            // Also try when components are fully loaded
+            setTimeout(initializeLanguageSystem, 2000);
             
             // Load header and footer components with dynamically calculated paths
             console.log('Current page location:', window.location.pathname);
@@ -711,6 +828,63 @@
                 console.log('Footer loaded successfully');
                 onComponentLoaded();
             });
+        });
+    </script>
+    
+    <script>
+        // Simple Fade Animation Observer
+        const observeElements = () => {
+            const elements = document.querySelectorAll('.fade-up');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            elements.forEach(el => observer.observe(el));
+        };
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const loader = document.getElementById('loader');
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner animate-spin mr-2"></i>Sending...';
+            loader.classList.remove('hidden');
+            
+            // Replace with actual form submission
+            setTimeout(() => {
+                alert('Form submitted successfully!');
+                this.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Request Information <i class="fas fa-paper-plane ml-2"></i>';
+                loader.classList.add('hidden');
+            }, 2000);
+        });
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            observeElements();
         });
     </script>
 </body>
