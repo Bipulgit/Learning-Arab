@@ -143,7 +143,64 @@ const translations = {
         mentoring: "Mentoring",
         support: "Support",
         scroll_down: "Scroll Down",
-        enroll_now_btn: "Enroll Now"
+        enroll_now_btn: "Enroll Now",
+        
+        // CBAP Course Page
+        business_analysis_course: "Business Analysis Course",
+        cbap_course_title: "CBAP Course Details",
+        cbap_hero_description: "Master Business Analysis with our comprehensive CBAP certification training program",
+        breadcrumb_home: "Home",
+        breadcrumb_courses: "Courses", 
+        breadcrumb_cbap: "CBAP Course Details",
+        request_information_title: "Request for Information",
+        form_name_placeholder: "Enter your Name",
+        form_email_placeholder: "Enter your Email",
+        form_mobile_placeholder: "Enter your Mobile No",
+        form_query_placeholder: "Enter your Query",
+        form_request_button: "Request Information",
+        form_sending_message: "Sending your message...",
+        cbap_training_title: "CBAP Training",
+        cbap_description: "The Certified Business Analysis Professional (CBAP) is a globally recognized certification for experienced business analysts, awarded by the International Institute of Business Analysis (IIBA).",
+        overview_title: "Overview",
+        course_features_title: "Course Features",
+        lectures_label: "Lectures",
+        lectures_value: "10-12",
+        quizzes_label: "Quizzes",
+        quizzes_value: "Yes",
+        duration_label: "Duration",
+        duration_value: "30 hours",
+        skill_level_label: "Skill Level",
+        skill_level_value: "Beginner",
+        language_label: "Language",
+        language_value: "English",
+        students_label: "Students",
+        students_value: "15-20",
+        assessments_label: "Assessments",
+        assessments_value: "Yes",
+        course_description_title: "Course Description",
+        course_description_text: "The CBAP course is a comprehensive training program designed to prepare candidates for the CBAP exam by covering the IIBA's Business Analysis Body of Knowledge (BABOK).",
+        training_highlights_title: "CBAP Training & Preparation Highlights:",
+        highlight_1: "Earn <strong>30 Training hours with Live</strong>, Instructor-Led Sessions.",
+        highlight_2: "5 Simulation <strong>Exams, Projects, 200+ Quizzes</strong>.",
+        highlight_3: "Interactive Sessions with <strong>Activities</strong>.",
+        highlight_4: "<strong>Real-World Simulations, Case Studies</strong>, and more.",
+        highlight_5: "<strong>Expert trainers</strong> with <strong>quality management experience</strong>.",
+        highlight_6: "<strong>Access Unlimited Classes</strong> with <strong>180-Day</strong> Grand Pass.",
+        pricing_options_title: "Pricing Options",
+        self_paced_badge: "SELF PACED TRAINING",
+        exam_certification_title: "About exam & certification details:",
+        faq_benefits_question: "👉 What are the Benefits of CBAP Certification?",
+        faq_benefits_answer: "1. Recognition of advanced business analysis skills.<br>2. Improved career opportunities and higher earning potential.<br>3. Access to a global network of professionals and resources.<br>4. Credibility in the industry, which can help with leadership and strategic decision-making roles.",
+        faq_requirements_question: "👉 What do I Need to Become a CBAP®?",
+        faq_requirements_answer: "1. Complete a minimum of 7,500 hours of Business Analysis Work experience in the last 10 years.<br>2. Within this experience, a minimum of 900 hours completed in 4 of the 6 BABOK® Guide Knowledge Areas, for a total of at least 3,600 of the required 7,500 total.<br>3. Complete a minimum of 35 hours of Professional development in the last 4 years.<br>4. Provide two references.<br>5. Agree to Code of Conduct.<br>6. Agree to Terms and Conditions.<br>7. Pass the exam.",
+        faq_process_question: "👉 What is the Process to Get CBAP Certified ?",
+        faq_process_answer: "Step 1. Meet Eligibility Requirements.<br>Step 2. Apply for the Exam.<br>Step 3. Prepare and Take the Exam.",
+        faq_fee_question: "👉 What is the Exam Fee for CBAP Exam?",
+        faq_fee_answer: "The CBAP exam fee is $450 USD for IIBA members and $575 USD for non-members. Additionally, there is a non-refundable application fee of $125 USD that is required at the time of application submission.",
+        faq_eligibility_question: "👉 What is the Eligibility Criteria for CBAP Certification ?",
+        faq_eligibility_answer: "Work Experience: A minimum of 7,500 hours of work experience in business analysis over the last 10 years.<br>Knowledge Areas: Within the 7,500 hours, at least 900 hours should be in four of the six BABOK knowledge areas.<br>Professional Development: A minimum of 35 hours of professional development in business analysis in the past four years.<br>References: Two references from a career manager, client, or Certified Business Analysis Professional.",
+        faq_duration_question: "👉 How Long is the CBAP Exam Duration ?",
+        faq_duration_answer: "The CBAP certification exam duration is 3.5 hours (210 minutes), and it consists of 120 multiple-choice questions. These questions are case study-based and require analysis of real-world scenarios."
     },
     
     ar: {
@@ -284,7 +341,64 @@ const translations = {
         mentoring: "الإرشاد",
         support: "الدعم",
         scroll_down: "انتقل للأسفل",
-        enroll_now_btn: "سجل الآن"
+        enroll_now_btn: "سجل الآن",
+        
+        // CBAP Course Page - Arabic translations
+        business_analysis_course: "دورة تحليل الأعمال",
+        cbap_course_title: "تفاصيل دورة CBAP",
+        cbap_hero_description: "أتقن تحليل الأعمال مع برنامج التدريب الشامل لشهادة CBAP",
+        breadcrumb_home: "الرئيسية",
+        breadcrumb_courses: "الدورات",
+        breadcrumb_cbap: "تفاصيل دورة CBAP",
+        request_information_title: "طلب معلومات",
+        form_name_placeholder: "أدخل اسمك",
+        form_email_placeholder: "أدخل بريدك الإلكتروني",
+        form_mobile_placeholder: "أدخل رقم هاتفك",
+        form_query_placeholder: "أدخل استفسارك",
+        form_request_button: "طلب معلومات",
+        form_sending_message: "جارٍ إرسال رسالتك...",
+        cbap_training_title: "تدريب CBAP",
+        cbap_description: "شهادة محلل الأعمال المحترف المعتمد (CBAP) هي شهادة معترف بها عالمياً لمحللي الأعمال ذوي الخبرة، تمنحها المعهد الدولي لتحليل الأعمال (IIBA).",
+        overview_title: "نظرة عامة",
+        course_features_title: "مميزات الدورة",
+        lectures_label: "المحاضرات",
+        lectures_value: "10-12",
+        quizzes_label: "الاختبارات",
+        quizzes_value: "نعم",
+        duration_label: "المدة",
+        duration_value: "30 ساعة",
+        skill_level_label: "مستوى المهارة",
+        skill_level_value: "مبتدئ",
+        language_label: "اللغة",
+        language_value: "الإنجليزية",
+        students_label: "الطلاب",
+        students_value: "15-20",
+        assessments_label: "التقييمات",
+        assessments_value: "نعم",
+        course_description_title: "وصف الدورة",
+        course_description_text: "دورة CBAP هي برنامج تدريبي شامل مصمم لإعداد المرشحين لامتحان CBAP من خلال تغطية مجموعة معارف تحليل الأعمال (BABOK) الخاصة بـ IIBA.",
+        training_highlights_title: "أبرز نقاط التدريب والإعداد لـ CBAP:",
+        highlight_1: "احصل على <strong>30 ساعة تدريبية مع جلسات</strong> مباشرة بقيادة المدرب.",
+        highlight_2: "5 امتحانات محاكاة، <strong>مشاريع، أكثر من 200 اختبار</strong>.",
+        highlight_3: "جلسات تفاعلية مع <strong>الأنشطة</strong>.",
+        highlight_4: "<strong>محاكاة العالم الحقيقي، دراسات الحالة</strong>، والمزيد.",
+        highlight_5: "<strong>مدربون خبراء</strong> مع <strong>خبرة في إدارة الجودة</strong>.",
+        highlight_6: "<strong>الوصول إلى فصول غير محدودة</strong> مع <strong>تصريح كبير لمدة 180 يوماً</strong>.",
+        pricing_options_title: "خيارات التسعير",
+        self_paced_badge: "التدريب الذاتي",
+        exam_certification_title: "حول تفاصيل الامتحان والشهادة:",
+        faq_benefits_question: "👉 ما هي فوائد شهادة CBAP؟",
+        faq_benefits_answer: "1. الاعتراف بمهارات تحليل الأعمال المتقدمة.<br>2. تحسين الفرص المهنية وإمكانات الكسب الأعلى.<br>3. الوصول إلى شبكة عالمية من المهنيين والموارد.<br>4. المصداقية في الصناعة، والتي يمكن أن تساعد في أدوار القيادة واتخاذ القرارات الاستراتيجية.",
+        faq_requirements_question: "👉 ماذا أحتاج لأصبح CBAP®؟",
+        faq_requirements_answer: "1. إكمال ما لا يقل عن 7500 ساعة من خبرة عمل تحليل الأعمال في آخر 10 سنوات.<br>2. ضمن هذه الخبرة، ما لا يقل عن 900 ساعة مكتملة في 4 من 6 مجالات معرفة دليل BABOK®، لما لا يقل عن 3600 من إجمالي 7500 المطلوبة.<br>3. إكمال ما لا يقل عن 35 ساعة من التطوير المهني في آخر 4 سنوات.<br>4. تقديم مرجعين.<br>5. الموافقة على مدونة السلوك.<br>6. الموافقة على الشروط والأحكام.<br>7. اجتياز الامتحان.",
+        faq_process_question: "👉 ما هي عملية الحصول على شهادة CBAP؟",
+        faq_process_answer: "الخطوة 1. تلبية متطلبات الأهلية.<br>الخطوة 2. التقديم للامتحان.<br>الخطوة 3. التحضير وأداء الامتحان.",
+        faq_fee_question: "👉 ما هي رسوم امتحان CBAP؟",
+        faq_fee_answer: "رسوم امتحان CBAP هي 450 دولار أمريكي لأعضاء IIBA و575 دولار أمريكي لغير الأعضاء. بالإضافة إلى ذلك، هناك رسوم طلب غير قابلة للاسترداد قدرها 125 دولار أمريكي مطلوبة وقت تقديم الطلب.",
+        faq_eligibility_question: "👉 ما هي معايير الأهلية لشهادة CBAP؟",
+        faq_eligibility_answer: "خبرة العمل: ما لا يقل عن 7500 ساعة من خبرة العمل في تحليل الأعمال خلال آخر 10 سنوات.<br>مجالات المعرفة: ضمن 7500 ساعة، يجب أن تكون 900 ساعة على الأقل في أربعة من ستة مجالات معرفة BABOK.<br>التطوير المهني: ما لا يقل عن 35 ساعة من التطوير المهني في تحليل الأعمال في السنوات الأربع الماضية.<br>المراجع: مرجعان من مدير مهني أو عميل أو محلل أعمال محترف معتمد.",
+        faq_duration_question: "👉 كم مدة امتحان CBAP؟",
+        faq_duration_answer: "مدة امتحان شهادة CBAP هي 3.5 ساعة (210 دقيقة)، ويتكون من 120 سؤال متعدد الخيارات. هذه الأسئلة تعتمد على دراسة الحالة وتتطلب تحليل سيناريوهات العالم الحقيقي."
     }
 };
 
@@ -313,7 +427,10 @@ class ComponentLoader {
             }
 
             const html = await response.text();
-            element.innerHTML = html;
+            
+            // Fix relative paths based on the current page location
+            const fixedHtml = this.fixRelativePaths(html, componentPath);
+            element.innerHTML = fixedHtml;
 
             if (callback && typeof callback === 'function') {
                 callback();
@@ -350,6 +467,36 @@ class ComponentLoader {
         } catch (error) {
             console.error('Error loading some components:', error);
         }
+    }
+
+    fixRelativePaths(html, componentPath) {
+        // Determine how deep we are from root
+        const currentPath = window.location.pathname;
+        const depth = (currentPath.match(/\//g) || []).length - 1;
+        
+        // If we're in a subdirectory, fix relative paths to assets
+        if (depth > 0) {
+            const pathPrefix = '../'.repeat(depth);
+            
+            // Fix asset paths
+            html = html.replace(/src="assets\//g, `src="${pathPrefix}assets/`);
+            html = html.replace(/href="assets\//g, `href="${pathPrefix}assets/`);
+            
+            // Fix navigation links that should go to root
+            html = html.replace(/href="index\.html"/g, `href="${pathPrefix}index.html"`);
+            html = html.replace(/href="about-us\.html"/g, `href="${pathPrefix}about-us.html"`);
+            html = html.replace(/href="gallery\.html"/g, `href="${pathPrefix}gallery.html"`);
+            html = html.replace(/href="contact-us-1\.html"/g, `href="${pathPrefix}contact-us-1.html"`);
+            html = html.replace(/href="contact-us-2\.html"/g, `href="${pathPrefix}contact-us-2.html"`);
+            
+            // Fix auth links
+            html = html.replace(/href="auth\//g, `href="${pathPrefix}auth/`);
+            
+            // Fix course links - these need special handling for relative paths
+            html = html.replace(/href="courses\//g, `href="${pathPrefix}courses/`);
+        }
+        
+        return html;
     }
 
     checkAllComponentsLoaded() {
