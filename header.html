@@ -40,12 +40,12 @@
                     </div>
                     
                     <!-- Country Selector -->
-                    <div class="relative group">
+                    <!-- <div class="relative group">
                         <select class="bg-white/20 hover:bg-white/30 text-white text-sm border border-white/30 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 backdrop-blur-sm cursor-pointer">
                             <option value="saudi" class="text-black bg-white" data-translate="saudi">🇸🇦 Saudi Arabia</option>
                             <option value="australia" class="text-black bg-white" data-translate="australia">🇦🇺 Australia</option>
                         </select>
-                    </div>
+                    </div> -->
                     
                     <a href="auth/login.html" class="text-sm hover:text-gray-200 transition-colors bg-white/10 hover:bg-white/20 px-3 py-2 rounded-md font-medium" data-translate="login">Login</a>
                     <a href="auth/register.html" class="text-sm hover:text-gray-200 transition-colors bg-white/10 hover:bg-white/20 px-3 py-2 rounded-md font-medium" data-translate="register">Register</a>
@@ -347,11 +347,94 @@
         </div>
     </div>
     
-    <!-- Mobile Menu (Keep the same as before) -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="xl:hidden bg-white border-t shadow-lg hidden">
         <div class="container mx-auto px-4 py-6 max-h-screen overflow-y-auto">
             <!-- Mobile Navigation Content -->
-            <!-- (Keep the existing mobile menu content from the previous response) -->
+            <nav class="space-y-4">
+                <!-- Main Navigation Links -->
+                <div class="space-y-3">
+                    <a href="index.html" class="flex items-center text-gray-700 hover:text-primary transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-blue-50">
+                        <i class="fas fa-home mr-3 text-primary"></i>
+                        <span data-translate="home">Home</span>
+                    </a>
+                    
+                    <a href="about-us.html" class="flex items-center text-gray-700 hover:text-primary transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-blue-50">
+                        <i class="fas fa-info-circle mr-3 text-primary"></i>
+                        <span data-translate="about_us">About Us</span>
+                    </a>
+                    
+                    <!-- Courses Dropdown for Mobile -->
+                    <div class="space-y-2">
+                        <button class="w-full flex items-center justify-between text-gray-700 hover:text-primary transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-blue-50 mobile-dropdown-btn">
+                            <div class="flex items-center">
+                                <i class="fas fa-graduation-cap mr-3 text-primary"></i>
+                                <span data-translate="courses">Courses</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+                        </button>
+                        
+                        <div class="ml-6 space-y-2 hidden mobile-dropdown-content">
+                            <a href="courses/project-management/index.html" class="block text-gray-600 hover:text-primary transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-blue-50">
+                                <span data-translate="project_management">Project Management</span>
+                            </a>
+                            <a href="courses/it-security/index.html" class="block text-gray-600 hover:text-primary transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-blue-50">
+                                <span data-translate="it_security">IT Security & Data Protection</span>
+                            </a>
+                            <a href="courses/business-analysis/index.html" class="block text-gray-600 hover:text-primary transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-blue-50">
+                                <span data-translate="business_analysis">Business Analysis</span>
+                            </a>
+                            <a href="courses/six-sigma/index.html" class="block text-gray-600 hover:text-primary transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-blue-50">
+                                <span data-translate="six_sigma">Six Sigma Training</span>
+                            </a>
+                            <a href="courses/microsoft-training/index.html" class="block text-gray-600 hover:text-primary transition-colors duration-300 py-2 px-4 rounded-lg hover:bg-blue-50">
+                                <span data-translate="microsoft_training">Microsoft Training</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="gallery.html" class="flex items-center text-gray-700 hover:text-primary transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-blue-50">
+                        <i class="fas fa-images mr-3 text-primary"></i>
+                        <span data-translate="gallery">Gallery</span>
+                    </a>
+                    
+                    <a href="contact-us-1.html" class="flex items-center text-gray-700 hover:text-primary transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-blue-50">
+                        <i class="fas fa-envelope mr-3 text-primary"></i>
+                        <span data-translate="contact_us">Contact Us</span>
+                    </a>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="pt-4 border-t border-gray-200 space-y-3">
+                    <a href="auth/login.html" class="flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-6 rounded-lg font-medium transition-all duration-300">
+                        <i class="fas fa-sign-in-alt mr-2"></i>
+                        <span data-translate="login">Login</span>
+                    </a>
+                    
+                    <a href="contact-us-2.html" class="flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        <span data-translate="join_now">Join Now</span>
+                    </a>
+                </div>
+            </nav>
         </div>
     </div>
+
+<!-- GTranslate Widget -->
+<script>
+window.gtranslateSettings = {
+    "default_language": "en",
+    "native_language_names": true,
+    "detect_browser_language": true,
+    "languages": ["en", "ar", "es", "fr", "de", "zh", "hi", "ja", "pt", "ru"],
+    "wrapper_selector": ".gtranslate_wrapper",
+    "horizontal_position": "right",
+    "vertical_position": "top"
+}
+</script>
+
+<div class="gtranslate_wrapper"></div>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
 </header>
