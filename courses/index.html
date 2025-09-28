@@ -30,6 +30,8 @@
 </head>
 
 <body class="font-sans antialiased bg-slate-50">
+    <!-- header.html content goes here -->
+     <div id="header"></div>
     
     <!-- Hover-activated Sidebar -->
     <aside id="sidebar" class="group fixed left-0 top-0 z-50 w-20 hover:w-72 h-screen bg-white shadow-xl transition-all duration-300 ease-in-out">
@@ -38,7 +40,7 @@
                 <!-- Icon in collapsed state -->
                 <i class="fas fa-book-open text-2xl group-hover:hidden"></i>
                 <!-- Title in expanded state -->
-                <h2 class="text-lg font-bold hidden group-hover:block whitespace-nowrap">Course Categories</h2>
+                <h2 class="text-lg font-bold hidden group-hover:block whitespace-nowrap" data-translate="course_categories">Course Categories</h2>
             </div>
             <ul id="desktop-course-nav" class="flex-grow py-2 px-2 overflow-y-auto">
                 <!-- Categories will be populated by JS -->
@@ -53,13 +55,13 @@
             <div class="container mx-auto px-4">
                 <ol class="flex items-center space-x-2 text-sm">
                     <li>
-                        <a href="/" class="text-primary hover:underline transition-colors flex items-center">
+                        <a href="../index.html" class="text-primary hover:underline transition-colors flex items-center">
                             <i class="fas fa-home text-primary mr-2"></i>
-                            <span>Home</span>
+                            <span data-translate="home">Home</span>
                         </a>
                     </li>
                     <li><i class="fas fa-chevron-right text-slate-400 text-xs"></i></li>
-                    <li><span class="text-slate-700 font-medium">All Courses</span></li>
+                    <li>                    <span class="text-slate-700 font-medium" data-translate="all_courses">All Courses</span></li>
                 </ol>
             </div>
         </nav>
@@ -74,6 +76,80 @@
         </div>
     </div>
 
+      <!-- Footer Container -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="../assets/components.js"></script>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/form-validation.js"></script>
+    <script src="../assets/js/language-switcher.js"></script>
+    <script src="../assets/js/slider.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+
+    <script>
+        // Initialize Components First
+        document.addEventListener('DOMContentLoaded', function() {
+            const loader = new ComponentLoader();
+            window.componentLoader = loader; // Make it globally accessible
+            
+            let componentsLoaded = 0;
+            const totalComponents = 2;
+            
+            function onComponentLoaded() {
+                componentsLoaded++;
+                if (componentsLoaded === totalComponents) {
+                    console.log('All components loaded successfully');
+                    // Ensure language system is properly initialized
+                    if (window.componentLoader) {
+                        window.componentLoader.initializeLanguageToggle();
+                        window.componentLoader.initializeHeader(); // Initialize mobile menu functionality
+                        
+                        // Add callback to refresh course content when language changes
+                        if (window.componentLoader.languageSwitcher) {
+                            const originalChangeLanguage = window.componentLoader.languageSwitcher.changeLanguage;
+                            window.componentLoader.languageSwitcher.changeLanguage = function(lang) {
+                                originalChangeLanguage.call(this, lang);
+                                // Re-render the current category to update translations
+                                const activeButton = document.querySelector('.sidebar-item.bg-gradient-to-r');
+                                if (activeButton) {
+                                    activeButton.click();
+                                }
+                            };
+                        }
+                    }
+                    
+                    // Initialize form validation if available
+                    if (typeof initializeFormValidation === 'function') {
+                        initializeFormValidation();
+                    }
+                }
+            }
+            
+            // Load header and footer components with correct relative paths
+            console.log('Current page location:', window.location.pathname);
+            
+            // Since we're in /courses/index.html, we need to go up 1 level
+            const basePath = '../';
+            
+            const headerPath = basePath + 'header.html';
+            const footerPath = basePath + 'footer.html';
+            
+            console.log('Loading header from:', headerPath);
+            console.log('Loading footer from:', footerPath);
+            
+            loader.loadComponent('header', headerPath, () => {
+                console.log('Header loaded successfully');
+                onComponentLoaded();
+            });
+            
+            loader.loadComponent('footer', footerPath, () => {
+                console.log('Footer loaded successfully');
+                onComponentLoaded();
+            });
+        });
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -141,8 +217,8 @@
 
                 const headerHTML = `
                     <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-4 mb-6">
-                        <h1 class="text-2xl font-bold text-slate-900">${category.category}</h1>
-                        <p class="text-slate-600 text-sm mt-1">
+                        <h1 class="text-2xl font-bold text-slate-900" data-translate="${isAllCourses ? 'all_courses' : category.category.toLowerCase().replace(/\s+/g, '_')}">${category.category}</h1>
+                        <p class="text-slate-600 text-sm mt-1" data-translate="${isAllCourses ? 'showing_all_courses' : 'explore_courses'}">
                             ${isAllCourses ? 'Showing all available professional courses.' : `Explore professional courses in ${category.category.toLowerCase()}.`}
                         </p>
                     </div>
@@ -184,15 +260,15 @@
                                 </div>
                                 <p class="text-slate-600 text-sm mb-3 flex-grow">${course.description}</p>
                                 <div class="flex items-center text-xs text-slate-500 mb-4 space-x-4">
-                                    <div class="flex items-center"><i class="fas fa-clock mr-1 text-primary"></i><span>${course.duration}</span></div>
-                                    <div class="flex items-center"><i class="fas fa-users mr-1 text-secondary"></i><span>${course.students} students</span></div>
+                                    <div class="flex items-center"><i class="fas fa-clock mr-1 text-primary"></i><span data-translate="duration_label">${course.duration}</span></div>
+                                    <div class="flex items-center"><i class="fas fa-users mr-1 text-secondary"></i><span>${course.students}</span> <span data-translate="students_label">students</span></div>
                                 </div>
                                 <div class="flex items-center justify-between pt-3 border-t border-slate-100">
                                     <div>
                                         <span class="text-xl font-bold text-primary">$${course.price}</span>
                                         ${course.originalPrice ? `<span class="text-sm text-slate-400 line-through ml-1">$${course.originalPrice}</span>` : ''}
                                     </div>
-                                    <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">View Details</button>
+                                    <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300" data-translate="view_details">View Details</button>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +302,7 @@
             allCoursesButton.innerHTML = `
                 <div class="flex items-center">
                     <i class="fas fa-th-large fa-fw w-8 text-center text-lg"></i>
-                    <span class="text-sm font-medium hidden group-hover:block ml-3 whitespace-nowrap">All Courses</span>
+                    <span class="text-sm font-medium hidden group-hover:block ml-3 whitespace-nowrap" data-translate="all_courses">All Courses</span>
                 </div>
                 <span class="bg-accent text-primary text-xs px-2 py-0.5 rounded-full font-bold hidden group-hover:block">${coursesData.reduce((acc, cat) => acc + cat.subCourses.length, 0)}+</span>
             `;
