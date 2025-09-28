@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBAP Course Details - SanMark Learning</title>
+    <meta name="description" content="Master Business Analysis with our comprehensive CBAP certification training program - SanMark Learning">
+    <link rel="icon" href="../../assets/images/logos/logo-favicon.ico">
+    
+    <!-- Tailwind CSS CDN with Brand Colors Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../assets/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main Brand Colors
+                        primary: '#4c1864',
+                        'primary-light': '#8b3d91',
+                        'primary-dark': '#3a1249',
+                        
+                        secondary: '#4d0a91',
+                        'secondary-light': '#7a2eb8',
+                        'secondary-dark': '#380770',
+                        
+                        accent: '#f7b205',
+                        'accent-light': '#fdc235',
+                        'accent-dark': '#d49504',
+                        
+                        // Extended Brand Palette
+                        brand: {
+                            50: '#faf7fc', 100: '#f3ebf8', 200: '#e5d1ed', 300: '#d4ace0', 400: '#b976c9',
+                            500: '#4c1864', 600: '#3d1350', 700: '#310f3f', 800: '#260b2e', 900: '#1a081d'
+                        },
+                        'brand-secondary': {
+                            50: '#faf6fd', 100: '#f3e8fb', 200: '#e4c9f4', 300: '#d1a0eb', 400: '#b567dd',
+                            500: '#4d0a91', 600: '#3e0874', 700: '#32065d', 800: '#260446', 900: '#1a0330'
+                        },
+                        'brand-accent': {
+                            50: '#fffcf0', 100: '#fef7d9', 200: '#fdeaa8', 300: '#fbdb77', 400: '#f9c846',
+                            500: '#f7b205', 600: '#e09f04', 700: '#b5800c', 800: '#8a6009', 900: '#5f4106'
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(135deg, #4c1864, #4d0a91)',
+                        'gradient-accent': 'linear-gradient(135deg, #f7b205, #ff8f00)',
+                        'gradient-hero': 'linear-gradient(135deg, #4c1864, #4d0a91, #6b21a8)'
+                    },
+                    boxShadow: {
+                        'brand': '0 10px 25px -5px rgba(76, 24, 100, 0.3)',
+                        'accent': '0 10px 25px -5px rgba(247, 178, 5, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="font-sans antialiased">
+    <!-- Include your header component -->
+    <!-- header.html content goes here -->
+     <div id="header"></div>
+
+    <div class="page-wrapper min-h-screen bg-gray-50">
+        <div class="page-content bg-white">
+            
+            <!-- Modern Hero Banner -->
+            <div class="relative bg-gradient-hero py-20 lg:py-32 overflow-hidden">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10">
+                    <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+                        <defs>
+                            <pattern id="hero-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <circle cx="2" cy="2" r="1" fill="white" opacity="0.3"/>
+                                <circle cx="18" cy="18" r="1" fill="white" opacity="0.2"/>
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#hero-pattern)"/>
+                    </svg>
+                </div>
+                
+                <!-- Hero Content -->
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
+                            <i class="fas fa-graduation-cap text-accent mr-3"></i>
+                            <span class="text-white font-medium" data-translate="business_analysis_course">Business Analysis Course</span>
+                        </div>
+                        
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-translate="cbap_course_title">
+                            CBAP Course Details
+                        </h1>
+                        
+                        <p class="text-xl text-brand-100 max-w-2xl mx-auto" data-translate="cbap_hero_description">
+                            Master Business Analysis with our comprehensive CBAP certification training program
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modern Breadcrumb -->
+            <div class="bg-white border-b border-gray-200">
+                <div class="container mx-auto px-4 py-4">
+                    <nav class="flex items-center space-x-2 text-sm">
+                        <a href="../../index.html" class="text-primary hover:text-primary-dark font-medium transition-colors duration-200" data-translate="breadcrumb_home">
+                            Home
+                        </a>
+                        <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        <a href="../index.html" class="text-primary hover:text-primary-dark font-medium transition-colors duration-200" data-translate="breadcrumb_courses">
+                            Courses
+                        </a>
+                        <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        <span class="text-gray-700" data-translate="breadcrumb_cbap">CBAP Course Details</span>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="container mx-auto px-4 py-12 lg:py-20">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    
+                    <!-- Right Sidebar - Order: Last on mobile, Last on desktop -->
+                    <div class="lg:w-1/3 order-last">
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden sticky top-8">
+                            
+                            <!-- Pricing Header -->
+                            <div class="bg-gradient-primary p-8 text-white text-center">
+                                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-info-circle text-2xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2" data-translate="request_information_title">
+                                    Request for Information
+                                </h3>
+                            </div>
+
+                            <!-- Contact Form -->
+                            <div class="p-8">
+                                <form id="contactForm" method="POST" action="../../coursesemail.php" class="space-y-6">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <input type="text" 
+                                                   id="name" 
+                                                   name="name" 
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
+                                                   placeholder="Enter your Name" 
+                                                   data-translate-placeholder="form_name_placeholder"
+                                                   required>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="email" 
+                                                   id="email" 
+                                                   name="email" 
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
+                                                   placeholder="Enter your Email" 
+                                                   data-translate-placeholder="form_email_placeholder"
+                                                   required>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="tel" 
+                                                   id="mobile" 
+                                                   name="mobile" 
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white"
+                                                   placeholder="Enter your Mobile No" 
+                                                   data-translate-placeholder="form_mobile_placeholder"
+                                                   required>
+                                        </div>
+                                        
+                                        <div>
+                                            <textarea id="query" 
+                                                      name="query" 
+                                                      rows="4"
+                                                      class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 bg-gray-50 focus:bg-white resize-none"
+                                                      placeholder="Enter your Query" 
+                                                      data-translate-placeholder="form_query_placeholder"
+                                                      required></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Button with Accent Color -->
+                                    <button type="submit" 
+                                            class="w-full bg-accent hover:bg-accent-dark text-gray-900 font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-accent">
+                                        <span data-translate="form_request_button">Request Information</span>
+                                        <i class="fas fa-arrow-right ml-2"></i>
+                                    </button>
+                                </form>
+                                
+                                <!-- Loader -->
+                                <div id="loader" class="hidden text-center mt-6">
+                                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent"></div>
+                                    <p class="mt-4 text-gray-600" data-translate="form_sending_message">Sending your message...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Area - Order: First on mobile, First on desktop -->
+                    <div class="lg:w-2/3 order-first">
+                        
+                        <!-- Course Header -->
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
+                            <div class="flex items-start space-x-6 mb-8">
+                                <div class="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chart-bar text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-translate="cbap_training_title">
+                                        CBAP Training
+                                    </h2>
+                                    <p class="text-lg text-gray-600 leading-relaxed" data-translate="cbap_description">
+                                        The Certified Business Analysis Professional (CBAP) is a globally recognized certification for experienced business analysts, awarded by the International Institute of Business Analysis (IIBA).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Overview -->
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="overview_title">
+                                Overview
+                            </h3>
+                            
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                                <!-- Course Features -->
+                                <div>
+                                    <h4 class="text-xl font-semibold text-gray-900 mb-6" data-translate="course_features_title">
+                                        Course Features
+                                    </h4>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-book text-primary mr-3"></i>
+                                                <span class="text-gray-700 font-medium" data-translate="lectures_label">Lectures</span>
+                                            </div>
+                                            <span class="text-gray-900 font-bold" data-translate="lectures_value">10-12</span>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-question-circle text-secondary mr-3"></i>
+                                                <span class="text-gray-700 font-medium" data-translate="quizzes_label">Quizzes</span>
+                                            </div>
+                                            <span class="text-gray-900 font-bold" data-translate="quizzes_value">Yes</span>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-clock text-accent mr-3"></i>
+                                                <span class="text-gray-700 font-medium" data-translate="duration_label">Duration</span>
+                                            </div>
+                                            <span class="text-gray-900 font-bold" data-translate="duration_value">30 hours</span>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-signal text-primary-light mr-3"></i>
+                                                <span class="text-gray-700 font-medium" data-translate="skill_level_label">Skill Level</span>
+                                            </div>
+                                            <span class="text-gray-900 font-bold" data-translate="skill_level_value">Beginner</span>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-language text-secondary-light mr-3"></i>
+                                                <span class="text-gray-700 font-medium" data-translate="language_label">Language</span>
+                                            </div>
+                                            <span class="text-gray-900 font-bold" data-translate="language_value">English</span>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-users text-primary mr-3"></i>
+                                                <span class="text-gray-700 font-medium" data-translate="students_label">Students</span>
+                                            </div>
+                                            <span class="text-gray-900 font-bold" data-translate="students_value">15-20</span>
+                                        </div>
+                                        
+                                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                                            <div class="flex items-center">
+                                                <i class="fas fa-check-square text-secondary mr-3"></i>
+                                                <span class="text-gray-700 font-medium" data-translate="assessments_label">Assessments</span>
+                                            </div>
+                                            <span class="text-gray-900 font-bold" data-translate="assessments_value">Yes</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Course Description -->
+                                <div>
+                                    <h4 class="text-xl font-semibold text-gray-900 mb-6" data-translate="course_description_title">
+                                        Course Description
+                                    </h4>
+                                    <p class="text-gray-600 leading-relaxed mb-6" data-translate="course_description_text">
+                                        The CBAP course is a comprehensive training program designed to prepare candidates for the CBAP exam by covering the IIBA's Business Analysis Body of Knowledge (BABOK).
+                                    </p>
+                                    
+                                    <h5 class="text-lg font-semibold text-primary mb-4" data-translate="training_highlights_title">
+                                        CBAP Training & Preparation Highlights:
+                                    </h5>
+                                    
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                            <span class="text-gray-700" data-translate="highlight_1">
+                                                Earn <strong>30 Training hours with Live</strong>, Instructor-Led Sessions.
+                                            </span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                            <span class="text-gray-700" data-translate="highlight_2">
+                                                5 Simulation <strong>Exams, Projects, 200+ Quizzes</strong>.
+                                            </span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                            <span class="text-gray-700" data-translate="highlight_3">
+                                                Interactive Sessions with <strong>Activities</strong>.
+                                            </span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                            <span class="text-gray-700" data-translate="highlight_4">
+                                                <strong>Real-World Simulations, Case Studies</strong>, and more.
+                                            </span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                            <span class="text-gray-700" data-translate="highlight_5">
+                                                <strong>Expert trainers</strong> with <strong>quality management experience</strong>.
+                                            </span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                            <span class="text-gray-700" data-translate="highlight_6">
+                                                <strong>Access Unlimited Classes</strong> with <strong>180-Day</strong> Grand Pass.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pricing Cards -->
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 text-center" data-translate="pricing_options_title">
+                                Pricing Options
+                            </h3>
+                            
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                
+                                <!-- Self Paced Training -->
+                                <div class="relative bg-gradient-to-br from-brand-50 to-brand-secondary-50 border-2 border-brand-200 rounded-3xl p-8 hover:shadow-brand transition-all duration-300 hover:scale-105">
+                                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                                        <span class="bg-gradient-primary text-white px-6 py-2 rounded-full text-sm font-bold" data-translate="self_paced_badge">
+                                            SELF PACED TRAINING
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="mt-8">
+                                        <ul class="space-y-4 mb-8">
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">30 Professional Training Hours</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">50 Conceptual Recorded Videos</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">Support from Industry Experts</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">5 Simulated Assignments</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">420 Practice Questions</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">12 Chapters</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">24*7 Customer Service</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">Weekly Query Resolutions</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="text-center bg-white rounded-2xl p-6">
+                                            <div class="mb-4">
+                                                <span class="text-sm text-gray-500">Actual Price:</span>
+                                                <span class="text-2xl font-bold text-gray-400 line-through ml-2">$599</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-500">Offer Price:</span>
+                                                <span class="text-3xl font-bold text-accent ml-2">$499</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Live Online Training -->
+                                <div class="relative bg-gradient-to-br from-brand-secondary-50 to-brand-50 border-2 border-brand-secondary-200 rounded-3xl p-8 hover:shadow-brand transition-all duration-300 hover:scale-105">
+                                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                                        <span class="bg-gradient-to-r from-secondary to-primary text-white px-6 py-2 rounded-full text-sm font-bold">
+                                            LIVE ONLINE TRAINING
+                                        </span>
+                                    </div>
+                                    
+                                    <div class="mt-8">
+                                        <ul class="space-y-4 mb-8">
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">Expert Certified Trainers</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">10 Days of Live Training</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">Support from the Qualified Trainers</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">5 Mock Tests</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">30 Professional Training Hours</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">Mentorship from the Expert Trainers</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">24*7 Customer Service Available</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-accent mr-3 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">Course Completion Certificate</span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="text-center bg-white rounded-2xl p-6">
+                                            <div class="mb-4">
+                                                <span class="text-sm text-gray-500">Actual Price:</span>
+                                                <span class="text-2xl font-bold text-gray-400 line-through ml-2">$999</span>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-500">Offer Price:</span>
+                                                <span class="text-3xl font-bold text-accent ml-2">$799</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <!-- Exam & Certification Details -->
+                    <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8" data-translate="exam_certification_title">
+                            About exam & certification details:
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <!-- FAQ Items -->
+                            <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
+                                <summary class="flex items-center justify-between cursor-pointer">
+                                    <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="faq_benefits_question">
+                                        👉 What are the Benefits of CBAP Certification?
+                                    </h4>
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform duration-200"></i>
+                                </summary>
+                                <div class="mt-4 pt-4 border-t border-gray-200">
+                                    <p class="text-gray-700 leading-relaxed" data-translate="faq_benefits_answer">
+                                        1. Recognition of advanced business analysis skills.<br>
+                                        2. Improved career opportunities and higher earning potential.<br>
+                                        3. Access to a global network of professionals and resources.<br>
+                                        4. Credibility in the industry, which can help with leadership and strategic decision-making roles.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
+                                <summary class="flex items-center justify-between cursor-pointer">
+                                    <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="faq_requirements_question">
+                                        👉 What do I Need to Become a CBAP®?
+                                    </h4>
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform duration-200"></i>
+                                </summary>
+                                <div class="mt-4 pt-4 border-t border-gray-200">
+                                    <p class="text-gray-700 leading-relaxed" data-translate="faq_requirements_answer">
+                                        1. Complete a minimum of 7,500 hours of Business Analysis Work experience in the last 10 years.<br>
+                                        2. Within this experience, a minimum of 900 hours completed in 4 of the 6 BABOK® Guide Knowledge Areas, for a total of at least 3,600 of the required 7,500 total.<br>
+                                        3. Complete a minimum of 35 hours of Professional development in the last 4 years.<br>
+                                        4. Provide two references.<br>
+                                        5. Agree to Code of Conduct.<br>
+                                        6. Agree to Terms and Conditions.<br>
+                                        7. Pass the exam.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
+                                <summary class="flex items-center justify-between cursor-pointer">
+                                    <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="faq_process_question">
+                                        👉 What is the Process to Get CBAP Certified ?
+                                    </h4>
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform duration-200"></i>
+                                </summary>
+                                <div class="mt-4 pt-4 border-t border-gray-200">
+                                    <p class="text-gray-700 leading-relaxed" data-translate="faq_process_answer">
+                                        Step 1. Meet Eligibility Requirements.<br>
+                                        Step 2. Apply for the Exam.<br>
+                                        Step 3. Prepare and Take the Exam.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
+                                <summary class="flex items-center justify-between cursor-pointer">
+                                    <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="faq_fee_question">
+                                        👉 What is the Exam Fee for CBAP Exam?
+                                    </h4>
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform duration-200"></i>
+                                </summary>
+                                <div class="mt-4 pt-4 border-t border-gray-200">
+                                    <p class="text-gray-700 leading-relaxed" data-translate="faq_fee_answer">
+                                        The CBAP exam fee is $450 USD for IIBA members and $575 USD for non-members. Additionally, there is a non-refundable application fee of $125 USD that is required at the time of application submission.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
+                                <summary class="flex items-center justify-between cursor-pointer">
+                                    <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="faq_eligibility_question">
+                                        👉 What is the Eligibility Criteria for CBAP Certification ?
+                                    </h4>
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform duration-200"></i>
+                                </summary>
+                                <div class="mt-4 pt-4 border-t border-gray-200">
+                                    <p class="text-gray-700 leading-relaxed" data-translate="faq_eligibility_answer">
+                                        Work Experience: A minimum of 7,500 hours of work experience in business analysis over the last 10 years.<br>
+                                        Knowledge Areas: Within the 7,500 hours, at least 900 hours should be in four of the six BABOK knowledge areas.<br>
+                                        Professional Development: A minimum of 35 hours of professional development in business analysis in the past four years.<br>
+                                        References: Two references from a career manager, client, or Certified Business Analysis Professional.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <details class="group bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
+                                <summary class="flex items-center justify-between cursor-pointer">
+                                    <h4 class="text-lg font-semibold text-gray-900 pr-4" data-translate="faq_duration_question">
+                                        👉 How Long is the CBAP Exam Duration ?
+                                    </h4>
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform duration-200"></i>
+                                </summary>
+                                <div class="mt-4 pt-4 border-t border-gray-200">
+                                    <p class="text-gray-700 leading-relaxed" data-translate="faq_duration_answer">
+                                        The CBAP certification exam duration is 3.5 hours (210 minutes), and it consists of 120 multiple-choice questions. These questions are case study-based and require analysis of real-world scenarios.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                        <!-- Curriculum -->
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 mb-12">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">
+                                Curriculum
+                            </h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-6 border border-brand-200">
+                                    <h5 class="font-semibold text-gray-900 flex items-center">
+                                        <span class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm mr-3">1</span>
+                                        Business Analysis Planning and Monitoring
+                                    </h5>
+                                </div>
+                                
+                                <div class="bg-gradient-to-br from-brand-secondary-50 to-brand-secondary-100 rounded-2xl p-6 border border-brand-secondary-200">
+                                    <h5 class="font-semibold text-gray-900 flex items-center">
+                                        <span class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center text-sm mr-3">2</span>
+                                        Elicitation and Collaboration
+                                    </h5>
+                                </div>
+                                
+                                <div class="bg-gradient-to-br from-brand-accent-50 to-brand-accent-100 rounded-2xl p-6 border border-brand-accent-200">
+                                    <h5 class="font-semibold text-gray-900 flex items-center">
+                                        <span class="w-8 h-8 bg-accent text-gray-900 rounded-full flex items-center justify-center text-sm mr-3">3</span>
+                                        Requirements Life Cycle Management
+                                    </h5>
+                                </div>
+                                
+                                <div class="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl p-6 border border-brand-200">
+                                    <h5 class="font-semibold text-gray-900 flex items-center">
+                                        <span class="w-8 h-8 bg-primary-dark text-white rounded-full flex items-center justify-center text-sm mr-3">4</span>
+                                        Strategy Analysis
+                                    </h5>
+                                </div>
+                                
+                                <div class="bg-gradient-to-br from-brand-secondary-50 to-brand-secondary-100 rounded-2xl p-6 border border-brand-secondary-200">
+                                    <h5 class="font-semibold text-gray-900 flex items-center">
+                                        <span class="w-8 h-8 bg-secondary-dark text-white rounded-full flex items-center justify-center text-sm mr-3">5</span>
+                                        Requirements Analysis and Design Definition
+                                    </h5>
+                                </div>
+                                
+                                <div class="bg-gradient-to-br from-brand-accent-50 to-brand-accent-100 rounded-2xl p-6 border border-brand-accent-200">
+                                    <h5 class="font-semibold text-gray-900 flex items-center">
+                                        <span class="w-8 h-8 bg-accent-dark text-white rounded-full flex items-center justify-center text-sm mr-3">6</span>
+                                        Solution Evaluation
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews -->
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">
+                                Reviews
+                            </h3>
+                            
+                            <div class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-brand-50 to-brand-secondary-50 rounded-2xl p-8">
+                                <div class="text-center md:text-left mb-6 md:mb-0">
+                                    <div class="flex items-center justify-center md:justify-start mb-4">
+                                        <span class="text-5xl font-bold text-primary mr-4">4.2</span>
+                                        <div>
+                                            <div class="flex items-center mb-2">
+                                                <i class="fas fa-star text-accent"></i>
+                                                <i class="fas fa-star text-accent"></i>
+                                                <i class="fas fa-star text-accent"></i>
+                                                <i class="fas fa-star text-accent"></i>
+                                                <i class="fas fa-star text-gray-300"></i>
+                                            </div>
+                                            <span class="text-gray-600">114 Rating</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center md:text-right">
+                                    <h4 class="text-3xl font-bold text-primary">SanMark Learning</h4>
+                                    <p class="text-gray-600">Trusted Training Provider</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Top Button -->
+            <button class="fixed bottom-8 right-8 bg-primary hover:bg-primary-dark text-white w-12 h-12 rounded-full shadow-brand transition-all duration-300 transform hover:scale-110 z-50" 
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Include your footer component -->
+    <!-- footer.html content goes here -->
+
+    <!-- Footer Container -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="../../assets/components.js"></script>
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/form-validation.js"></script>
+    <script src="../../assets/js/language-switcher.js"></script>
+    <script src="../../assets/js/slider.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <!-- Initialize Components -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loader = new ComponentLoader();
+            window.componentLoader = loader; // Make it globally accessible
+            
+            let componentsLoaded = 0;
+            const totalComponents = 2;
+            
+            function onComponentLoaded() {
+                componentsLoaded++;
+                if (componentsLoaded === totalComponents) {
+                    console.log('All components loaded successfully');
+                    // Ensure language system is properly initialized
+                    if (window.componentLoader) {
+                        window.componentLoader.initializeLanguageToggle();
+                        window.componentLoader.initializeHeader(); // Initialize mobile menu functionality
+                    }
+                    
+                    // Initialize form validation if available
+                    if (typeof initializeFormValidation === 'function') {
+                        initializeFormValidation();
+                    }
+                }
+            }
+            
+            // Load header and footer components with dynamically calculated paths
+            console.log('Current page location:', window.location.pathname);
+            
+            // Calculate the correct relative path based on current location
+            function getBasePath() {
+                const path = window.location.pathname;
+                const segments = path.split('/').filter(segment => segment !== '');
+                
+                // If we're in /courses/business-analysis/cbap.html, we need to go up 2 levels
+                if (segments.length >= 2 && segments[segments.length - 2] === 'business-analysis') {
+                    return '../../';
+                } else if (segments.length >= 1 && segments[segments.length - 1] === 'courses') {
+                    return '../';
+                } else {
+                    return './';
+                }
+            }
+            
+            const basePath = getBasePath();
+            console.log('Calculated base path:', basePath);
+            
+            const headerPath = basePath + 'header.html';
+            const footerPath = basePath + 'footer.html';
+            
+            console.log('Loading header from:', headerPath);
+            console.log('Loading footer from:', footerPath);
+            
+            loader.loadComponent('header', headerPath, () => {
+                console.log('Header loaded successfully');
+                onComponentLoaded();
+            });
+            
+            loader.loadComponent('footer', footerPath, () => {
+                console.log('Footer loaded successfully');
+                onComponentLoaded();
+            });
+        });
+    </script>
+</body>
+</html>

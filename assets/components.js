@@ -54,7 +54,89 @@ const translations = {
         email_placeholder: "Enter your email",
         copyright: "Copyright © 2025 SanMark Learning. All rights reserved.",
         made_with: "Made with",
-        in_saudi: "in Saudi Arabia"
+        in_saudi: "in Saudi Arabia",
+        
+        // Index page content
+        popular_courses_title: "Popular Courses",
+        popular_courses_subtitle: "Choose from our most sought-after certification programs designed for career advancement",
+        course_bestseller: "Bestseller",
+        course_new: "New",
+        course_trending: "Trending",
+        project_management_category: "Project Management",
+        it_service_management_category: "IT Service Management",
+        process_improvement_category: "Process Improvement",
+        
+        // PMP Course
+        pmp_certification_title: "PMP Certification",
+        pmp_course_description: "Project Management Professional certification for experienced project managers seeking career advancement",
+        pmp_contact_hours: "35 Contact Hours",
+        pmp_students_count: "8,500+ Students",
+        pmp_rating: "4.8/5 Rating",
+        
+        // ITIL Course
+        itil_foundation_title: "ITIL 4 Foundation",
+        itil_course_description: "Learn IT service management best practices and modern digital transformation approaches",
+        itil_contact_hours: "18 Contact Hours",
+        itil_students_count: "3,200+ Students",
+        itil_rating: "4.7/5 Rating",
+        
+        // Six Sigma Course
+        six_sigma_black_belt_title: "Six Sigma Black Belt",
+        six_sigma_course_description: "Master advanced process improvement methodologies and lead organizational transformation",
+        six_sigma_contact_hours: "40 Contact Hours",
+        six_sigma_students_count: "2,800+ Students",
+        six_sigma_rating: "4.9/5 Rating",
+        
+        // Common buttons
+        learn_more_btn: "Learn More",
+        view_all_courses_btn: "View All 110+ Courses",
+        
+        // Hero Section Slides
+        hero_slide1_title: "Welcome to SanMark Learning",
+        hero_slide1_subtitle: "Excel Your Excellence With Our Globally Online Training Programs",
+        hero_slide2_title: "Master Your Skills", 
+        hero_slide2_subtitle: "With Our Worldwide Training Programs & Expert Instructors",
+        hero_slide3_title: "Learn Anywhere",
+        hero_slide3_subtitle: "Classroom, Online, or From Home - Choose Your Learning Style",
+        
+        // Hero Buttons
+        start_learning_today: "Start Learning Today",
+        browse_courses_btn: "Browse Courses",
+        about_our_mission: "About Our Mission",
+        contact_us_btn: "Contact Us",
+        start_your_journey: "Start Your Journey",
+        view_gallery: "View Gallery",
+        
+        // Why SanMark Learning Section
+        why_sanmark_title: "Why SanMark Learning?",
+        why_sanmark_subtitle: "Experience world-class training that transforms careers and unlocks potential through innovative learning approaches",
+        
+        // Feature Cards
+        certified_trainers_title: "Certified Professional Trainers",
+        certified_trainers_description: "Our faculties are certified professional experts with significant experience in their domain, ensuring you learn from the best in the industry.",
+        expert_trainers_count: "15+ Expert Trainers",
+        
+        live_training_title: "Live Instructor Online Training",
+        live_training_description: "We conduct live classes through Zoom, GoToMeeting and other live meeting software platforms for real-time interactive learning.",
+        
+        cloud_portal_title: "Cloud E-learning Portal",
+        cloud_portal_description: "Get live class notifications, view class recordings, or practice questions all in one access through our advanced cloud platform.",
+        access_24_7: "24/7 Access",
+        mobile_app: "Mobile App",
+        
+        flexible_batch_title: "Flexible Batch Timings",
+        flexible_batch_description: "We have multiple batches for all the training programs for all the time zones, making learning accessible worldwide.",
+        
+        // Testimonials Section
+        testimonials_title: "WHAT PEOPLE",
+        testimonials_say: "SAY",
+        testimonials_subtitle: "These are some of our client's feedback after completing their training programs with us...",
+        
+        // Upcoming Batches Section
+        upcoming_sessions: "Upcoming Training Sessions",
+        upcoming_batches: "Upcoming", 
+        batches: "Batches",
+        upcoming_courses: "Upcoming Training Courses"
     },
     
     ar: {
@@ -106,7 +188,89 @@ const translations = {
         email_placeholder: "أدخل بريدك الإلكتروني",
         copyright: "حقوق الطبع والنشر © 2025 سان مارك للتعلم. جميع الحقوق محفوظة.",
         made_with: "صنع بـ", 
-        in_saudi: "في المملكة العربية السعودية"
+        in_saudi: "في المملكة العربية السعودية",
+        
+        // Index page content
+        popular_courses_title: "الدورات الشائعة",
+        popular_courses_subtitle: "اختر من أكثر برامج الشهادات المطلوبة المصممة للتقدم في الحياة المهنية",
+        course_bestseller: "الأكثر مبيعاً",
+        course_new: "جديد",
+        course_trending: "رائج",
+        project_management_category: "إدارة المشاريع",
+        it_service_management_category: "إدارة خدمات تقنية المعلومات",
+        process_improvement_category: "تحسين العمليات",
+        
+        // PMP Course
+        pmp_certification_title: "شهادة PMP",
+        pmp_course_description: "شهادة أخصائي إدارة المشاريع لمديري المشاريع ذوي الخبرة الساعين للتقدم الوظيفي",
+        pmp_contact_hours: "35 ساعة تدريبية",
+        pmp_students_count: "+8,500 طالب",
+        pmp_rating: "4.8/5 تقييم",
+        
+        // ITIL Course
+        itil_foundation_title: "أساسيات ITIL 4",
+        itil_course_description: "تعلم أفضل ممارسات إدارة خدمات تقنية المعلومات ومناهج التحول الرقمي الحديثة",
+        itil_contact_hours: "18 ساعة تدريبية",
+        itil_students_count: "+3,200 طالب",
+        itil_rating: "4.7/5 تقييم",
+        
+        // Six Sigma Course
+        six_sigma_black_belt_title: "الحزام الأسود لستة سيجما",
+        six_sigma_course_description: "إتقان منهجيات تحسين العمليات المتقدمة وقيادة التحول التنظيمي",
+        six_sigma_contact_hours: "40 ساعة تدريبية",
+        six_sigma_students_count: "+2,800 طالب",
+        six_sigma_rating: "4.9/5 تقييم",
+        
+        // Common buttons
+        learn_more_btn: "تعرف أكثر",
+        view_all_courses_btn: "عرض جميع الدورات +110",
+        
+        // Hero Section Slides
+        hero_slide1_title: "مرحباً بكم في سان مارك للتعلم",
+        hero_slide1_subtitle: "تفوق في التميز مع برامجنا التدريبية العالمية عبر الإنترنت",
+        hero_slide2_title: "أتقن مهاراتك", 
+        hero_slide2_subtitle: "مع برامجنا التدريبية العالمية والمدربين الخبراء",
+        hero_slide3_title: "تعلم في أي مكان",
+        hero_slide3_subtitle: "في الفصل، عبر الإنترنت، أو من المنزل - اختر أسلوب التعلم الذي يناسبك",
+        
+        // Hero Buttons
+        start_learning_today: "ابدأ التعلم اليوم",
+        browse_courses_btn: "تصفح الدورات",
+        about_our_mission: "حول مهمتنا",
+        contact_us_btn: "اتصل بنا",
+        start_your_journey: "ابدأ رحلتك",
+        view_gallery: "عرض المعرض",
+        
+        // Why SanMark Learning Section
+        why_sanmark_title: "لماذا سان مارك للتعلم؟",
+        why_sanmark_subtitle: "اختبر التدريب على مستوى عالمي يحول المهن ويطلق الإمكانات من خلال أساليب التعلم المبتكرة",
+        
+        // Feature Cards
+        certified_trainers_title: "مدربون محترفون معتمدون",
+        certified_trainers_description: "أعضاء هيئة التدريس لدينا هم خبراء محترفون معتمدون بخبرة كبيرة في مجالهم، مما يضمن لك التعلم من الأفضل في الصناعة.",
+        expert_trainers_count: "+15 مدرب خبير",
+        
+        live_training_title: "تدريب مباشر عبر الإنترنت مع المدرب",
+        live_training_description: "نقوم بإجراء دروس مباشرة من خلال Zoom وGoToMeeting ومنصات برمجيات الاجتماعات المباشرة الأخرى للتعلم التفاعلي في الوقت الفعلي.",
+        
+        cloud_portal_title: "بوابة التعلم السحابية",
+        cloud_portal_description: "احصل على إشعارات الدروس المباشرة، وشاهد تسجيلات الدروس، أو مارس الأسئلة كل ذلك في وصول واحد من خلال منصتنا السحابية المتقدمة.",
+        access_24_7: "وصول 24/7",
+        mobile_app: "تطبيق الهاتف",
+        
+        flexible_batch_title: "أوقات دفعات مرنة",
+        flexible_batch_description: "لدينا دفعات متعددة لجميع برامج التدريب لجميع المناطق الزمنية، مما يجعل التعلم في متناول الجميع حول العالم.",
+        
+        // Testimonials Section
+        testimonials_title: "ماذا يقول",
+        testimonials_say: "الناس",
+        testimonials_subtitle: "هذه بعض ملاحظات عملائنا بعد إكمال برامجهم التدريبية معنا...",
+        
+        // Upcoming Batches Section
+        upcoming_sessions: "جلسات التدريب القادمة",
+        upcoming_batches: "الدفعات", 
+        batches: "القادمة",
+        upcoming_courses: "الدورات التدريبية القادمة"
     }
 };
 

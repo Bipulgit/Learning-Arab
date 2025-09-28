@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Join Us - Career Opportunities at SanMark Learning | Build Your Future</title>
+    <meta name="description" content="Join SanMark Learning team! Explore exciting career opportunities in online training, education technology, and professional development. Apply now for your dream job.">
+    <meta name="keywords" content="careers sanmark learning, job opportunities, education jobs, training jobs, remote work, career growth">
+    <meta name="author" content="SanMark Learning">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Join Us - Career Opportunities at SanMark Learning">
+    <meta property="og:description" content="Build your career with SanMark Learning. Join our mission to provide world-class online training and certification programs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sanmarklearning.com/join-us">
+    <meta property="og:image" content="https://www.sanmarklearning.com/assets/images/careers-banner.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Join Us - SanMark Learning Careers",
+        "description": "Career opportunities and job openings at SanMark Learning",
+        "url": "https://www.sanmarklearning.com/join-us",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "SanMark Learning",
+            "url": "https://www.sanmarklearning.com",
+            "description": "Leading online training and certification provider"
+        }
+    }
+    </script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.sanmarklearning.com/join-us">
+    
+    <!-- Tailwind CSS with Brand Colors -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4c1864', secondary: '#4d0a91', accent: '#f7b205',
+                        brand: {
+                            50: '#faf7fc', 100: '#f3ebf8', 200: '#e5d1ed', 300: '#d4ace0', 400: '#b976c9',
+                            500: '#4c1864', 600: '#3d1350', 700: '#310f3f', 800: '#260b2e', 900: '#1a081d'
+                        },
+                        'brand-secondary': {
+                            50: '#faf6fd', 100: '#f3e8fb', 200: '#e4c9f4', 300: '#d1a0eb', 400: '#b567dd',
+                            500: '#4d0a91', 600: '#3e0874', 700: '#32065d', 800: '#260446', 900: '#1a0330'
+                        },
+                        'brand-accent': {
+                            50: '#fffcf0', 100: '#fef7d9', 200: '#fdeaa8', 300: '#fbdb77', 400: '#f9c846',
+                            500: '#f7b205', 600: '#e09f04', 700: '#b5800c', 800: '#8a6009', 900: '#5f4106'
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(135deg, #4c1864, #4d0a91)',
+                        'gradient-hero': 'linear-gradient(135deg, #4c1864, #4d0a91, #6b21a8)',
+                        'gradient-career': 'linear-gradient(135deg, #f7b205, #ff8f00)'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'slide-in': 'slideIn 0.6s ease-out forwards',
+                        'bounce-gentle': 'bounceGentle 2s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        slideIn: { '0%': { opacity: '0', transform: 'translateX(-30px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
+                        bounceGentle: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- IntlTelInput CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Animation Classes */
+        .fade-element { opacity: 0; transition: all 0.8s ease-out; }
+        .fade-element.visible { opacity: 1; transform: translateY(0) !important; }
+        .fade-up { transform: translateY(30px); }
+        .slide-left { transform: translateX(-30px); }
+        .slide-right { transform: translateX(30px); }
+        
+        /* Enhanced Hover Effects */
+        .hover-lift { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(76, 24, 100, 0.3); }
+        
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+        
+        /* Career Card Animations */
+        .career-card { 
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .career-card:hover { 
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(76, 24, 100, 0.25);
+        }
+        
+        /* Job Card Styles */
+        .job-card {
+            background: linear-gradient(145deg, #ffffff, #fafafa);
+            border-left: 4px solid #f7b205;
+            transition: all 0.3s ease;
+        }
+        .job-card:hover {
+            border-left-color: #4c1864;
+            transform: translateX(5px);
+            box-shadow: 0 20px 40px -15px rgba(76, 24, 100, 0.2);
+        }
+        
+        /* Form Enhancements */
+        .form-floating { transition: all 0.3s ease; }
+        .form-floating:focus-within { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(76, 24, 100, 0.2); }
+        
+        /* Background Pattern */
+        .hero-pattern { 
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(76, 24, 100, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(77, 10, 145, 0.1) 0%, transparent 50%);
+        }
+        
+        /* Benefit Icons */
+        .benefit-icon { 
+            background: linear-gradient(135deg, #f7b205, #ff8f00);
+            animation: bounce-gentle 2s ease-in-out infinite;
+        }
+        
+        /* Team Member Cards */
+        .team-member {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            transition: all 0.4s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px) rotateY(5deg);
+            box-shadow: 0 25px 50px -12px rgba(76, 24, 100, 0.2);
+        }
+        
+        /* Progress Bars */
+        .progress-bar {
+            background: linear-gradient(90deg, #4c1864, #4d0a91, #f7b205);
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Include Header -->
+    <!-- Your header.html content goes here -->
+
+    <div class="page-wrapper min-h-screen">
+        <div class="page-content bg-white">
+            
+            <!-- Enhanced Hero Section -->
+            <div class="relative bg-gradient-hero py-20 lg:py-28 overflow-hidden hero-pattern">
+                <!-- Animated Background Elements -->
+                <div class="absolute inset-0">
+                    <div class="absolute top-20 left-10 w-6 h-6 bg-accent/30 rounded-full animate-pulse"></div>
+                    <div class="absolute top-40 right-20 w-4 h-4 bg-white/20 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                    <div class="absolute bottom-32 left-1/4 w-8 h-8 bg-accent/20 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                    <div class="absolute top-60 right-1/3 w-5 h-5 bg-white/15 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+                </div>
+                
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <!-- Badge -->
+                        <div class="fade-element fade-up inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20" style="animation-delay: 0.1s">
+                            <i class="fas fa-users text-accent mr-3"></i>
+                            <span class="text-white font-medium" data-translate="career_opportunities">Career Opportunities</span>
+                        </div>
+                        
+                        <!-- Main Title -->
+                        <h1 class="fade-element fade-up text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-translate="join_us_title" style="animation-delay: 0.2s">
+                            Join Us
+                        </h1>
+                        
+                        <!-- Subtitle -->
+                        <p class="fade-element fade-up text-xl text-brand-100 max-w-3xl mx-auto mb-8" data-translate="join_hero_description" style="animation-delay: 0.3s">
+                            Join Us For Online Training Programs, Skill Up Yourself and build an amazing career with our dynamic team of education innovators
+                        </p>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="fade-element fade-up flex flex-col sm:flex-row gap-4 justify-center" style="animation-delay: 0.4s">
+                            <a href="#job-openings" class="bg-accent hover:bg-accent-dark text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover-lift inline-block">
+                                <span data-translate="view_openings">View Job Openings</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="#apply-form" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/30 hover:bg-white/20 transition-all duration-300 inline-block">
+                                <span data-translate="apply_now">Apply Now</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Company Stats -->
+                        <div class="fade-element fade-up flex justify-center items-center space-x-8 mt-12" style="animation-delay: 0.5s">
+                            <div class="text-center hover-lift">
+                                <div class="text-3xl font-bold text-accent">50+</div>
+                                <div class="text-sm text-white/80" data-translate="team_members">Team Members</div>
+                            </div>
+                            <div class="text-center hover-lift">
+                                <div class="text-3xl font-bold text-accent">8K+</div>
+                                <div class="text-sm text-white/80" data-translate="students_trained">Students Trained</div>
+                            </div>
+                            <div class="text-center hover-lift">
+                                <div class="text-3xl font-bold text-accent">5</div>
+                                <div class="text-sm text-white/80" data-translate="countries">Countries</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breadcrumb -->
+            <nav class="bg-white border-b border-gray-200 py-4 fade-element fade-in">
+                <div class="container mx-auto px-4">
+                    <ol class="flex items-center space-x-2 text-sm">
+                        <li>
+                            <a href="/" class="text-primary hover:text-primary-dark transition-colors" data-translate="breadcrumb_home">
+                                <i class="fas fa-home mr-1"></i>Home
+                            </a>
+                        </li>
+                        <li><i class="fas fa-chevron-right text-gray-400 text-xs mx-2"></i></li>
+                        <li><span class="text-gray-700" data-translate="breadcrumb_join">Join Us</span></li>
+                    </ol>
+                </div>
+            </nav>
+
+            <!-- Why Join Us Section -->
+            <section class="container mx-auto px-4 py-16 lg:py-24">
+                <div class="text-center mb-16 fade-element fade-up">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6" data-translate="why_join_title">
+                        Why Join SanMark Learning?
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="why_join_description">
+                        Be part of a mission to transform lives through education. Join our passionate team and make a global impact in the world of online learning.
+                    </p>
+                </div>
+
+                <!-- Benefits Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Benefit 1 -->
+                    <div class="fade-element fade-up career-card rounded-3xl p-8 text-center hover-lift" style="animation-delay: 0.1s">
+                        <div class="w-16 h-16 benefit-icon rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-rocket text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="career_growth">Career Growth</h3>
+                        <p class="text-gray-600" data-translate="career_growth_desc">Accelerate your career with continuous learning opportunities and leadership development programs.</p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="fade-element fade-up career-card rounded-3xl p-8 text-center hover-lift" style="animation-delay: 0.2s">
+                        <div class="w-16 h-16 benefit-icon rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-globe text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="global_impact">Global Impact</h3>
+                        <p class="text-gray-600" data-translate="global_impact_desc">Make a difference by helping thousands of professionals worldwide achieve their certification goals.</p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="fade-element fade-up career-card rounded-3xl p-8 text-center hover-lift" style="animation-delay: 0.3s">
+                        <div class="w-16 h-16 benefit-icon rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-laptop-house text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="flexible_work">Flexible Work</h3>
+                        <p class="text-gray-600" data-translate="flexible_work_desc">Enjoy work-life balance with flexible working hours and remote work opportunities.</p>
+                    </div>
+
+                    <!-- Benefit 4 -->
+                    <div class="fade-element fade-up career-card rounded-3xl p-8 text-center hover-lift" style="animation-delay: 0.4s">
+                        <div class="w-16 h-16 benefit-icon rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="learning_culture">Learning Culture</h3>
+                        <p class="text-gray-600" data-translate="learning_culture_desc">Access to free courses, certifications, and continuous skill development programs.</p>
+                    </div>
+
+                    <!-- Benefit 5 -->
+                    <div class="fade-element fade-up career-card rounded-3xl p-8 text-center hover-lift" style="animation-delay: 0.5s">
+                        <div class="w-16 h-16 benefit-icon rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="health_benefits">Health Benefits</h3>
+                        <p class="text-gray-600" data-translate="health_benefits_desc">Comprehensive health insurance, wellness programs, and mental health support.</p>
+                    </div>
+
+                    <!-- Benefit 6 -->
+                    <div class="fade-element fade-up career-card rounded-3xl p-8 text-center hover-lift" style="animation-delay: 0.6s">
+                        <div class="w-16 h-16 benefit-icon rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-trophy text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3" data-translate="recognition">Recognition</h3>
+                        <p class="text-gray-600" data-translate="recognition_desc">Performance-based rewards, bonuses, and recognition programs for outstanding work.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Job Openings Section -->
+            <section id="job-openings" class="bg-gray-50 py-16 lg:py-24">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16 fade-element fade-up">
+                        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6" data-translate="job_openings_title">
+                            Current Job Openings
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="job_openings_description">
+                            Explore exciting career opportunities across different departments and find your perfect role with us.
+                        </p>
+                    </div>
+
+                    <!-- Job Cards -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Job 1 -->
+                        <div class="fade-element fade-up job-card rounded-2xl p-8 hover-lift" style="animation-delay: 0.1s">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2" data-translate="job_1_title">Senior Training Specialist</h3>
+                                    <div class="flex items-center text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                                        <span data-translate="job_location_remote">Remote / Noida</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-600">
+                                        <i class="fas fa-clock mr-2 text-accent"></i>
+                                        <span data-translate="job_type_full_time">Full Time</span>
+                                    </div>
+                                </div>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" data-translate="job_status_urgent">Urgent</span>
+                            </div>
+                            <p class="text-gray-600 mb-6" data-translate="job_1_description">
+                                Lead training programs for PMP, ITIL, and other certifications. Design curriculum, deliver expert-level instruction, and mentor junior trainers.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Project Management</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">ITIL</span>
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Leadership</span>
+                            </div>
+                            <button class="w-full bg-gradient-primary text-white py-3 px-6 rounded-xl font-semibold hover-lift transition-all duration-300">
+                                <span data-translate="apply_for_position">Apply for Position</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="fade-element fade-up job-card rounded-2xl p-8 hover-lift" style="animation-delay: 0.2s">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2" data-translate="job_2_title">Digital Marketing Manager</h3>
+                                    <div class="flex items-center text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                                        <span data-translate="job_location_hybrid">Hybrid / Noida</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-600">
+                                        <i class="fas fa-clock mr-2 text-accent"></i>
+                                        <span data-translate="job_type_full_time">Full Time</span>
+                                    </div>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" data-translate="job_status_new">New</span>
+                            </div>
+                            <p class="text-gray-600 mb-6" data-translate="job_2_description">
+                                Drive our digital marketing strategy, manage campaigns across multiple channels, and optimize conversion rates for course enrollments.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">SEO/SEM</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Social Media</span>
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Analytics</span>
+                            </div>
+                            <button class="w-full bg-gradient-primary text-white py-3 px-6 rounded-xl font-semibold hover-lift transition-all duration-300">
+                                <span data-translate="apply_for_position">Apply for Position</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="fade-element fade-up job-card rounded-2xl p-8 hover-lift" style="animation-delay: 0.3s">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2" data-translate="job_3_title">Full Stack Developer</h3>
+                                    <div class="flex items-center text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                                        <span data-translate="job_location_remote">Remote</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-600">
+                                        <i class="fas fa-clock mr-2 text-accent"></i>
+                                        <span data-translate="job_type_full_time">Full Time</span>
+                                    </div>
+                                </div>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" data-translate="job_status_hot">Hot</span>
+                            </div>
+                            <p class="text-gray-600 mb-6" data-translate="job_3_description">
+                                Build and maintain our learning management system, develop interactive features, and enhance user experience across all platforms.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">React</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Node.js</span>
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            </div>
+                            <button class="w-full bg-gradient-primary text-white py-3 px-6 rounded-xl font-semibold hover-lift transition-all duration-300">
+                                <span data-translate="apply_for_position">Apply for Position</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Job 4 -->
+                        <div class="fade-element fade-up job-card rounded-2xl p-8 hover-lift" style="animation-delay: 0.4s">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2" data-translate="job_4_title">Customer Success Manager</h3>
+                                    <div class="flex items-center text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                                        <span data-translate="job_location_noida">Noida</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-600">
+                                        <i class="fas fa-clock mr-2 text-accent"></i>
+                                        <span data-translate="job_type_full_time">Full Time</span>
+                                    </div>
+                                </div>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" data-translate="job_status_featured">Featured</span>
+                            </div>
+                            <p class="text-gray-600 mb-6" data-translate="job_4_description">
+                                Ensure student success throughout their learning journey, provide support, and maintain high satisfaction rates for our training programs.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Communication</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Problem Solving</span>
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">CRM</span>
+                            </div>
+                            <button class="w-full bg-gradient-primary text-white py-3 px-6 rounded-xl font-semibold hover-lift transition-all duration-300">
+                                <span data-translate="apply_for_position">Apply for Position</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Application Form Section -->
+            <section id="apply-form" class="container mx-auto px-4 py-16 lg:py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    
+                    <!-- Company Information -->
+                    <div class="fade-element slide-left">
+                        <div class="bg-gradient-primary text-white rounded-3xl p-8 lg:p-12 hover-lift">
+                            <!-- Header -->
+                            <div class="mb-8">
+                                <h2 class="text-3xl lg:text-4xl font-bold mb-4 flex items-center" data-translate="company_info_title">
+                                    <i class="fas fa-building mr-3 text-accent"></i>
+                                    Company Information
+                                </h2>
+                                <p class="text-lg text-brand-100 leading-relaxed" data-translate="company_info_description">
+                                    Join Us For Online Training Programs, Skill Up Yourself and be part of our mission to transform careers through quality education and certification programs.
+                                </p>
+                            </div>
+
+                            <!-- Company Details -->
+                            <div class="space-y-6">
+                                <!-- Location -->
+                                <div class="flex items-start space-x-4 hover-scale">
+                                    <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-xl text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1" data-translate="our_location">Our Location</h3>
+                                        <p class="text-brand-100" data-translate="address_line_1">Sector 4, Noida</p>
+                                        <p class="text-brand-100" data-translate="address_line_2">India</p>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="flex items-start space-x-4 hover-scale">
+                                    <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-phone-alt text-xl text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1" data-translate="hr_contact">HR Contact</h3>
+                                        <a href="tel:+917501806876" class="text-brand-100 hover:text-accent transition-colors">
+                                            +91-7501806876
+                                        </a>
+                                        <p class="text-sm text-brand-200" data-translate="support_line">(24/7 Support Line)</p>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="flex items-start space-x-4 hover-scale">
+                                    <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-envelope text-xl text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1" data-translate="careers_email">Careers Email</h3>
+                                        <a href="mailto:careers@sanmarklearning.com" class="text-brand-100 hover:text-accent transition-colors">
+                                            careers@sanmarklearning.com
+                                        </a>
+                                        <p class="text-sm text-brand-200" data-translate="careers_response_time">Response within 48 hours</p>
+                                    </div>
+                                </div>
+
+                                <!-- Founded -->
+                                <div class="flex items-start space-x-4 hover-scale">
+                                    <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-calendar-alt text-xl text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1" data-translate="company_founded">Founded</h3>
+                                        <p class="text-brand-100" data-translate="founded_year">2015</p>
+                                        <p class="text-sm text-brand-200" data-translate="years_experience">10+ Years Experience</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Company Culture -->
+                            <div class="mt-10 pt-8 border-t border-white/20">
+                                <h3 class="font-semibold text-lg mb-4" data-translate="our_culture">Our Culture</h3>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-accent">50+</div>
+                                        <div class="text-sm text-brand-200" data-translate="team_size">Team Size</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-accent">98%</div>
+                                        <div class="text-sm text-brand-200" data-translate="satisfaction_rate">Satisfaction Rate</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application Form -->
+                    <div class="fade-element slide-right">
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 hover-lift">
+                            <!-- Form Header -->
+                            <div class="mb-8">
+                                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-translate="apply_now_title">
+                                    Apply Now
+                                </h2>
+                                <p class="text-lg text-gray-600 leading-relaxed" data-translate="application_form_description">
+                                    Please Share Your Contact Details and tell us about your experience. We'll get back to you within 48 hours for suitable positions.
+                                </p>
+                            </div>
+
+                            <!-- Application Form -->
+                            <form id="applicationForm" class="contact-bx ajax-form" action="contactemail.php" method="POST" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Name Field -->
+                                    <div class="form-floating">
+                                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="full_name_label">Your Full Name</label>
+                                        <input type="text" 
+                                               id="name" 
+                                               name="name" 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                               placeholder="Enter your full name"
+                                               data-translate-placeholder="name_placeholder"
+                                               required>
+                                    </div>
+
+                                    <!-- Email Field -->
+                                    <div class="form-floating">
+                                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="email_label">Your Email Address</label>
+                                        <input type="email" 
+                                               id="email" 
+                                               name="email" 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                               placeholder="Enter your email address"
+                                               data-translate-placeholder="email_placeholder"
+                                               required>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Phone Field -->
+                                    <div class="form-floating">
+                                        <label for="mobile" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="phone_label">Your Phone Number</label>
+                                        <input type="tel" 
+                                               id="mobile" 
+                                               name="phone" 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                               placeholder="Enter your phone number"
+                                               data-translate-placeholder="phone_placeholder"
+                                               required>
+                                    </div>
+
+                                    <!-- Position Field -->
+                                    <div class="form-floating">
+                                        <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="position_label">Position Applying For</label>
+                                        <select id="subject" 
+                                                name="subject" 
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                required>
+                                            <option value="" data-translate="select_position">Select Position</option>
+                                            <option value="Senior Training Specialist" data-translate="job_1_title">Senior Training Specialist</option>
+                                            <option value="Digital Marketing Manager" data-translate="job_2_title">Digital Marketing Manager</option>
+                                            <option value="Full Stack Developer" data-translate="job_3_title">Full Stack Developer</option>
+                                            <option value="Customer Success Manager" data-translate="job_4_title">Customer Success Manager</option>
+                                            <option value="Other" data-translate="other_position">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Experience Level -->
+                                <div class="form-floating">
+                                    <label for="experience" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="experience_label">Experience Level</label>
+                                    <select id="experience" 
+                                            name="experience" 
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                            required>
+                                        <option value="" data-translate="select_experience">Select Experience Level</option>
+                                        <option value="0-1 years" data-translate="experience_fresher">0-1 years (Fresher)</option>
+                                        <option value="1-3 years" data-translate="experience_junior">1-3 years (Junior)</option>
+                                        <option value="3-5 years" data-translate="experience_mid">3-5 years (Mid Level)</option>
+                                        <option value="5-8 years" data-translate="experience_senior">5-8 years (Senior)</option>
+                                        <option value="8+ years" data-translate="experience_expert">8+ years (Expert)</option>
+                                    </select>
+                                </div>
+
+                                <!-- Cover Letter -->
+                                <div class="form-floating">
+                                    <label for="message" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="cover_letter_label">Cover Letter / Message</label>
+                                    <textarea id="message" 
+                                              name="message" 
+                                              rows="6"
+                                              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                                              placeholder="Tell us about your experience, skills, and why you want to join our team..."
+                                              data-translate-placeholder="cover_letter_placeholder"
+                                              required></textarea>
+                                </div>
+
+                                <!-- reCAPTCHA -->
+                                <div class="form-floating">
+                                    <div class="g-recaptcha" 
+                                         data-sitekey="6Lf2gYwUAAAAAJLxwnZTvpJqbYFWqVyzE-8BWhVe"
+                                         data-callback="verifyRecaptchaCallback"
+                                         data-expired-callback="expiredRecaptchaCallback"></div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="pt-4">
+                                    <button type="submit" 
+                                            class="w-full bg-gradient-primary hover:shadow-lg text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-brand group relative overflow-hidden">
+                                        <span class="relative z-10" data-translate="submit_application">Submit Application</span>
+                                        <i class="fas fa-paper-plane ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform relative z-10"></i>
+                                        <div class="absolute inset-0 bg-gradient-to-r from-primary-light to-secondary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </button>
+                                </div>
+
+                                <!-- Success/Error Messages -->
+                                <div id="form-messages" class="mt-4 text-center">
+                                    <div id="success-message" class="hidden bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-xl">
+                                        <i class="fas fa-check-circle mr-2"></i>
+                                        <span data-translate="application_success">Thank you! Your application has been submitted successfully. We'll review and get back to you soon.</span>
+                                    </div>
+                                    <div id="error-message" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl">
+                                        <i class="fas fa-exclamation-circle mr-2"></i>
+                                        <span data-translate="application_error">Sorry, there was an error submitting your application. Please try again.</span>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Loading Indicator -->
+                            <div id="loading" class="hidden text-center mt-6">
+                                <div class="inline-flex items-center">
+                                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mr-3"></div>
+                                    <span class="text-gray-600" data-translate="submitting_application">Submitting your application...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Back to Top Button -->
+            <button id="backToTop" class="fixed bottom-8 right-8 bg-primary hover:bg-primary-dark text-white w-12 h-12 rounded-full shadow-lg transition-all duration-300 hover-lift z-50 opacity-0 invisible" 
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                    aria-label="Back to top">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <!-- Your footer.html content goes here -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="assets/js/language-switcher.js"></script>
+    
+    <script>
+        // Animation Observer
+        const observeElements = () => {
+            const elements = document.querySelectorAll('.fade-element');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            elements.forEach(el => observer.observe(el));
+        };
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // International Phone Input
+        let iti;
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector("#mobile");
+            iti = window.intlTelInput(input, {
+                initialCountry: "in",
+                preferredCountries: ["in", "us", "gb", "ae"],
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                separateDialCode: true,
+                formatOnDisplay: true
+            });
+            
+            // Initialize animations
+            observeElements();
+        });
+        
+        // reCAPTCHA Callbacks
+        function verifyRecaptchaCallback(response) {
+            document.getElementById('applicationForm').querySelector('button[type="submit"]').disabled = false;
+        }
+        
+        function expiredRecaptchaCallback() {
+            document.getElementById('applicationForm').querySelector('button[type="submit"]').disabled = true;
+        }
+        
+        // Form Submission
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const loading = document.getElementById('loading');
+            const successMsg = document.getElementById('success-message');
+            const errorMsg = document.getElementById('error-message');
+            
+            // Hide previous messages
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+            
+            // Show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner animate-spin mr-2"></i>Submitting...';
+            loading.classList.remove('hidden');
+            
+            // Get the full phone number
+            const fullPhoneNumber = iti.getNumber();
+            
+            // Prepare form data
+            const formData = new FormData(form);
+            formData.set('phone', fullPhoneNumber);
+            formData.set('type', 'job_application'); // Add application type
+            
+            // Submit form
+            fetch('contactemail.php', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.text())
+            .then(data => {
+                loading.classList.add('hidden');
+                
+                if (data.includes('success') || data.includes('sent')) {
+                    successMsg.classList.remove('hidden');
+                    form.reset();
+                    grecaptcha.reset();
+                } else {
+                    errorMsg.classList.remove('hidden');
+                }
+            })
+            .catch(error => {
+                loading.classList.add('hidden');
+                errorMsg.classList.remove('hidden');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span data-translate="submit_application">Submit Application</span><i class="fas fa-paper-plane ml-3"></i>';
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

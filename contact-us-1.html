@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact Us - SanMark Learning | Get in Touch for Training Programs</title>
+    <meta name="description" content="Contact SanMark Learning for online training programs, certification courses, and skill development. Get in touch with our experts for personalized learning solutions.">
+    <meta name="keywords" content="contact sanmark learning, training programs, online courses, certification training, skill development">
+    <meta name="author" content="SanMark Learning">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - SanMark Learning | Training Programs">
+    <meta property="og:description" content="Get in touch with SanMark Learning for expert training programs and certification courses. Available 24/7 for support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sanmarklearning.com/contact">
+    <meta property="og:image" content="https://www.sanmarklearning.com/assets/images/contact-banner.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact SanMark Learning",
+        "description": "Contact us for online training programs and certification courses",
+        "url": "https://www.sanmarklearning.com/contact",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-7501806876",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Arabic"],
+            "areaServed": "Worldwide"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sector 4",
+            "addressLocality": "Noida",
+            "addressCountry": "India"
+        }
+    }
+    </script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.sanmarklearning.com/contact">
+    
+    <!-- Tailwind CSS with Brand Colors -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4c1864', secondary: '#4d0a91', accent: '#f7b205',
+                        brand: {
+                            50: '#faf7fc', 100: '#f3ebf8', 200: '#e5d1ed', 300: '#d4ace0', 400: '#b976c9',
+                            500: '#4c1864', 600: '#3d1350', 700: '#310f3f', 800: '#260b2e', 900: '#1a081d'
+                        },
+                        'brand-secondary': {
+                            50: '#faf6fd', 100: '#f3e8fb', 200: '#e4c9f4', 300: '#d1a0eb', 400: '#b567dd',
+                            500: '#4d0a91', 600: '#3e0874', 700: '#32065d', 800: '#260446', 900: '#1a0330'
+                        },
+                        'brand-accent': {
+                            50: '#fffcf0', 100: '#fef7d9', 200: '#fdeaa8', 300: '#fbdb77', 400: '#f9c846',
+                            500: '#f7b205', 600: '#e09f04', 700: '#b5800c', 800: '#8a6009', 900: '#5f4106'
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-primary': 'linear-gradient(135deg, #4c1864, #4d0a91)',
+                        'gradient-hero': 'linear-gradient(135deg, #4c1864, #4d0a91, #6b21a8)',
+                        'gradient-contact': 'linear-gradient(135deg, #f7b205, #ff8f00)'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'slide-in': 'slideIn 0.6s ease-out forwards'
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        fadeUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        slideIn: { '0%': { opacity: '0', transform: 'translateX(-30px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- IntlTelInput CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Animation Classes */
+        .fade-element { opacity: 0; transition: all 0.8s ease-out; }
+        .fade-element.visible { opacity: 1; transform: translateY(0) !important; }
+        .fade-up { transform: translateY(30px); }
+        .slide-left { transform: translateX(-30px); }
+        .slide-right { transform: translateX(30px); }
+        
+        /* Enhanced Hover Effects */
+        .hover-lift { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -15px rgba(76, 24, 100, 0.3); }
+        
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+        
+        /* Contact Card Animations */
+        .contact-card { background: linear-gradient(145deg, #ffffff, #f8fafc); }
+        .contact-card:hover { box-shadow: 0 25px 50px -12px rgba(76, 24, 100, 0.25); }
+        
+        /* Form Enhancements */
+        .form-floating { position: relative; transition: all 0.3s ease; }
+        .form-floating:focus-within { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(76, 24, 100, 0.2); }
+        
+        .form-input { transition: all 0.3s ease; }
+        .form-input:focus { transform: scale(1.02); box-shadow: 0 0 0 3px rgba(76, 24, 100, 0.1); }
+        
+        /* Background Pattern */
+        .hero-pattern { background-image: 
+            radial-gradient(circle at 25% 25%, rgba(76, 24, 100, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(77, 10, 145, 0.1) 0%, transparent 50%);
+        }
+        
+        /* Contact Info Icons */
+        .contact-icon { 
+            background: linear-gradient(135deg, #f7b205, #ff8f00);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Loading Animation */
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+        
+        @keyframes dots {
+            0%, 20% { color: rgba(0,0,0,0); text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
+            40% { color: #4c1864; text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
+            60% { text-shadow: .25em 0 0 #4c1864, .5em 0 0 rgba(0,0,0,0); }
+            80%, 100% { text-shadow: .25em 0 0 #4c1864, .5em 0 0 #4c1864; }
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Include Header -->
+    <!-- Your header.html content goes here -->
+
+    <div class="page-wrapper min-h-screen">
+        <div class="page-content bg-white">
+            
+            <!-- Enhanced Hero Section -->
+            <div class="relative bg-gradient-hero py-20 lg:py-28 overflow-hidden hero-pattern">
+                <!-- Animated Background Elements -->
+                <div class="absolute inset-0">
+                    <div class="absolute top-20 left-10 w-6 h-6 bg-accent/30 rounded-full animate-pulse"></div>
+                    <div class="absolute top-40 right-20 w-4 h-4 bg-white/20 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                    <div class="absolute bottom-32 left-1/4 w-8 h-8 bg-accent/20 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                    <div class="absolute top-60 right-1/3 w-5 h-5 bg-white/15 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+                </div>
+                
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <!-- Badge -->
+                        <div class="fade-element fade-up inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6 border border-white/20" style="animation-delay: 0.1s">
+                            <i class="fas fa-phone text-accent mr-3"></i>
+                            <span class="text-white font-medium" data-translate="support_available">24/7 Support Available</span>
+                        </div>
+                        
+                        <!-- Main Title -->
+                        <h1 class="fade-element fade-up text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-translate="contact_us_title" style="animation-delay: 0.2s">
+                            Contact Us
+                        </h1>
+                        
+                        <!-- Subtitle -->
+                        <p class="fade-element fade-up text-xl text-brand-100 max-w-2xl mx-auto mb-8" data-translate="contact_hero_description" style="animation-delay: 0.3s">
+                            Contact Us For Online Training Programs, Skill Up Yourself with Expert Guidance
+                        </p>
+                        
+                        <!-- Quick Contact Stats -->
+                        <div class="fade-element fade-up flex justify-center items-center space-x-8 mt-12" style="animation-delay: 0.4s">
+                            <div class="text-center hover-lift">
+                                <div class="text-3xl font-bold text-accent">24/7</div>
+                                <div class="text-sm text-white/80" data-translate="support_hours">Support Hours</div>
+                            </div>
+                            <div class="text-center hover-lift">
+                                <div class="text-3xl font-bold text-accent">8K+</div>
+                                <div class="text-sm text-white/80" data-translate="happy_clients">Happy Clients</div>
+                            </div>
+                            <div class="text-center hover-lift">
+                                <div class="text-3xl font-bold text-accent">110+</div>
+                                <div class="text-sm text-white/80" data-translate="courses_offered">Courses Offered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breadcrumb -->
+            <nav class="bg-white border-b border-gray-200 py-4 fade-element fade-in">
+                <div class="container mx-auto px-4">
+                    <ol class="flex items-center space-x-2 text-sm">
+                        <li>
+                            <a href="/" class="text-primary hover:text-primary-dark transition-colors" data-translate="breadcrumb_home">
+                                <i class="fas fa-home mr-1"></i>Home
+                            </a>
+                        </li>
+                        <li><i class="fas fa-chevron-right text-gray-400 text-xs mx-2"></i></li>
+                        <li><span class="text-gray-700" data-translate="breadcrumb_contact">Contact Us</span></li>
+                    </ol>
+                </div>
+            </nav>
+
+            <!-- Main Contact Section -->
+            <main class="container mx-auto px-4 py-16 lg:py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    
+                    <!-- Contact Information -->
+                    <div class="fade-element slide-left">
+                        <div class="bg-gradient-primary text-white rounded-3xl p-8 lg:p-12 contact-card hover-lift">
+                            <!-- Header -->
+                            <div class="mb-8">
+                                <h2 class="text-3xl lg:text-4xl font-bold mb-4 flex items-center" data-translate="contact_information_title">
+                                    <i class="fas fa-info-circle mr-3 text-accent"></i>
+                                    Contact Information
+                                </h2>
+                                <p class="text-lg text-brand-100 leading-relaxed" data-translate="contact_info_description">
+                                    Contact Us For Online Training Programs, Skill Up Yourself with our comprehensive certification courses and expert guidance.
+                                </p>
+                            </div>
+
+                            <!-- Contact Details -->
+                            <div class="space-y-6">
+                                <!-- Location -->
+                                <div class="flex items-start space-x-4 hover-scale">
+                                    <div class="w-12 h-12 contact-icon rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1" data-translate="our_location">Our Location</h3>
+                                        <p class="text-brand-100" data-translate="address_line_1">Sector 4, Noida</p>
+                                        <p class="text-brand-100" data-translate="address_line_2">India</p>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="flex items-start space-x-4 hover-scale">
+                                    <div class="w-12 h-12 contact-icon rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-phone-alt text-xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1" data-translate="phone_number">Phone Number</h3>
+                                        <a href="tel:+917501806876" class="text-brand-100 hover:text-accent transition-colors">
+                                            +91-7501806876
+                                        </a>
+                                        <p class="text-sm text-brand-200" data-translate="support_line">(24/7 Support Line)</p>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="flex items-start space-x-4 hover-scale">
+                                    <div class="w-12 h-12 contact-icon rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-envelope text-xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1" data-translate="email_address">Email Address</h3>
+                                        <a href="mailto:Info@sanmarklearning.com" class="text-brand-100 hover:text-accent transition-colors">
+                                            Info@sanmarklearning.com
+                                        </a>
+                                        <p class="text-sm text-brand-200" data-translate="email_response_time">Response within 24 hours</p>
+                                    </div>
+                                </div>
+
+                                <!-- Working Hours -->
+                                <div class="flex items-start space-x-4 hover-scale">
+                                    <div class="w-12 h-12 contact-icon rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-clock text-xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-lg mb-1" data-translate="working_hours">Working Hours</h3>
+                                        <p class="text-brand-100" data-translate="hours_weekdays">Mon - Fri: 9:00 AM - 8:00 PM</p>
+                                        <p class="text-brand-100" data-translate="hours_weekends">Sat - Sun: 10:00 AM - 6:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Links -->
+                            <div class="mt-10 pt-8 border-t border-white/20">
+                                <h3 class="font-semibold text-lg mb-4" data-translate="follow_us">Follow Us</h3>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 bg-white/20 hover:bg-accent rounded-lg flex items-center justify-center transition-all duration-300 hover-scale">
+                                        <i class="fab fa-facebook-f text-white"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-white/20 hover:bg-accent rounded-lg flex items-center justify-center transition-all duration-300 hover-scale">
+                                        <i class="fab fa-twitter text-white"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-white/20 hover:bg-accent rounded-lg flex items-center justify-center transition-all duration-300 hover-scale">
+                                        <i class="fab fa-linkedin-in text-white"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-white/20 hover:bg-accent rounded-lg flex items-center justify-center transition-all duration-300 hover-scale">
+                                        <i class="fab fa-youtube text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="fade-element slide-right">
+                        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12 hover-lift">
+                            <!-- Form Header -->
+                            <div class="mb-8">
+                                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-translate="get_in_touch_title">
+                                    Get In Touch
+                                </h2>
+                                <p class="text-lg text-gray-600 leading-relaxed" data-translate="form_description">
+                                    Please Share Your Contact Details So that we can Connect with you for Quick Service and personalized learning solutions.
+                                </p>
+                            </div>
+
+                            <!-- Contact Form -->
+                            <form id="contactForm" class="contact-bx ajax-form" action="contactemail.php" method="POST" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Name Field -->
+                                    <div class="form-floating">
+                                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="your_name_label">Your Name</label>
+                                        <input type="text" 
+                                               id="name" 
+                                               name="name" 
+                                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                               placeholder="Enter your full name"
+                                               data-translate-placeholder="name_placeholder"
+                                               required>
+                                    </div>
+
+                                    <!-- Email Field -->
+                                    <div class="form-floating">
+                                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="email_label">Your Email Address</label>
+                                        <input type="email" 
+                                               id="email" 
+                                               name="email" 
+                                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                               placeholder="Enter your email address"
+                                               data-translate-placeholder="email_placeholder"
+                                               required>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Phone Field with International Input -->
+                                    <div class="form-floating">
+                                        <label for="mobile" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="phone_label">Your Phone Number</label>
+                                        <input type="tel" 
+                                               id="mobile" 
+                                               name="phone" 
+                                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                               placeholder="Enter your phone number"
+                                               data-translate-placeholder="phone_placeholder"
+                                               required>
+                                    </div>
+
+                                    <!-- Course Name Field -->
+                                    <div class="form-floating">
+                                        <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="course_label">Course Name</label>
+                                        <input type="text" 
+                                               id="subject" 
+                                               name="subject" 
+                                               class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white"
+                                               placeholder="Which course are you interested in?"
+                                               data-translate-placeholder="course_placeholder"
+                                               required>
+                                    </div>
+                                </div>
+
+                                <!-- Message Field -->
+                                <div class="form-floating">
+                                    <label for="message" class="block text-sm font-semibold text-gray-700 mb-2" data-translate="message_label">Type Message</label>
+                                    <textarea id="message" 
+                                              name="message" 
+                                              rows="5"
+                                              class="form-input w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                                              placeholder="Tell us about your training needs..."
+                                              data-translate-placeholder="message_placeholder"
+                                              required></textarea>
+                                </div>
+
+                                <!-- reCAPTCHA -->
+                                <div class="form-floating">
+                                    <div class="g-recaptcha" 
+                                         data-sitekey="6Lf2gYwUAAAAAJLxwnZTvpJqbYFWqVyzE-8BWhVe"
+                                         data-callback="verifyRecaptchaCallback"
+                                         data-expired-callback="expiredRecaptchaCallback"></div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="pt-4">
+                                    <button type="submit" 
+                                            class="w-full bg-gradient-primary hover:shadow-lg text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-brand group relative overflow-hidden">
+                                        <span class="relative z-10" data-translate="send_message_btn">Send Message</span>
+                                        <i class="fas fa-paper-plane ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform relative z-10"></i>
+                                        <div class="absolute inset-0 bg-gradient-to-r from-primary-light to-secondary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </button>
+                                </div>
+
+                                <!-- Success/Error Messages -->
+                                <div id="form-messages" class="mt-4 text-center">
+                                    <div id="success-message" class="hidden bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-xl">
+                                        <i class="fas fa-check-circle mr-2"></i>
+                                        <span data-translate="success_message">Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+                                    </div>
+                                    <div id="error-message" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl">
+                                        <i class="fas fa-exclamation-circle mr-2"></i>
+                                        <span data-translate="error_message">Sorry, there was an error sending your message. Please try again.</span>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Loading Indicator -->
+                            <div id="loading" class="hidden text-center mt-6">
+                                <div class="inline-flex items-center">
+                                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mr-3"></div>
+                                    <span class="text-gray-600 loading-dots" data-translate="sending_message">Sending your message</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Contact Options -->
+                <div class="mt-16 lg:mt-24">
+                    <div class="text-center mb-12 fade-element fade-up">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-translate="other_ways_title">
+                            Other Ways to Reach Us
+                        </h2>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="other_ways_description">
+                            Choose the most convenient way to get in touch with our team
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- WhatsApp -->
+                        <div class="fade-element fade-up text-center bg-white rounded-2xl p-8 shadow-lg hover-lift border border-gray-100" style="animation-delay: 0.1s">
+                            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fab fa-whatsapp text-3xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3" data-translate="whatsapp_title">WhatsApp</h3>
+                            <p class="text-gray-600 mb-4" data-translate="whatsapp_description">Quick support via WhatsApp</p>
+                            <a href="https://wa.me/917501806876" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors">
+                                <span data-translate="chat_now">Chat Now</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+
+                        <!-- Live Chat -->
+                        <div class="fade-element fade-up text-center bg-white rounded-2xl p-8 shadow-lg hover-lift border border-gray-100" style="animation-delay: 0.2s">
+                            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-comments text-3xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3" data-translate="live_chat_title">Live Chat</h3>
+                            <p class="text-gray-600 mb-4" data-translate="live_chat_description">Instant support on our website</p>
+                            <button class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors">
+                                <span data-translate="start_chat">Start Chat</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Schedule Call -->
+                        <div class="fade-element fade-up text-center bg-white rounded-2xl p-8 shadow-lg hover-lift border border-gray-100" style="animation-delay: 0.3s">
+                            <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-calendar-alt text-3xl text-accent"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3" data-translate="schedule_call_title">Schedule Call</h3>
+                            <p class="text-gray-600 mb-4" data-translate="schedule_call_description">Book a consultation call</p>
+                            <button class="inline-flex items-center text-accent hover:text-accent-dark font-semibold transition-colors">
+                                <span data-translate="book_call">Book Call</span>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Back to Top Button -->
+            <button id="backToTop" class="fixed bottom-8 right-8 bg-primary hover:bg-primary-dark text-white w-12 h-12 rounded-full shadow-lg transition-all duration-300 hover-lift z-50 opacity-0 invisible" 
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                    aria-label="Back to top">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <!-- Your footer.html content goes here -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="assets/js/language-switcher.js"></script>
+    
+    <script>
+        // Animation Observer
+        const observeElements = () => {
+            const elements = document.querySelectorAll('.fade-element');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            elements.forEach(el => observer.observe(el));
+        };
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // International Phone Input
+        let iti;
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector("#mobile");
+            iti = window.intlTelInput(input, {
+                initialCountry: "in",
+                preferredCountries: ["in", "us", "gb", "ae"],
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                separateDialCode: true,
+                formatOnDisplay: true
+            });
+            
+            // Initialize animations
+            observeElements();
+        });
+        
+        // reCAPTCHA Callbacks
+        function verifyRecaptchaCallback(response) {
+            document.getElementById('contactForm').querySelector('button[type="submit"]').disabled = false;
+        }
+        
+        function expiredRecaptchaCallback() {
+            document.getElementById('contactForm').querySelector('button[type="submit"]').disabled = true;
+        }
+        
+        // Enhanced Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const loading = document.getElementById('loading');
+            const successMsg = document.getElementById('success-message');
+            const errorMsg = document.getElementById('error-message');
+            
+            // Hide previous messages
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+            
+            // Show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner animate-spin mr-2"></i>Sending...';
+            loading.classList.remove('hidden');
+            
+            // Get the full phone number including country code
+            const fullPhoneNumber = iti.getNumber();
+            
+            // Prepare form data
+            const formData = new FormData(form);
+            formData.set('phone', fullPhoneNumber);
+            
+            // Submit form
+            fetch('contactemail.php', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.text())
+            .then(data => {
+                loading.classList.add('hidden');
+                
+                if (data.includes('success') || data.includes('sent')) {
+                    successMsg.classList.remove('hidden');
+                    form.reset();
+                    grecaptcha.reset();
+                } else {
+                    errorMsg.classList.remove('hidden');
+                }
+            })
+            .catch(error => {
+                loading.classList.add('hidden');
+                errorMsg.classList.remove('hidden');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span data-translate="send_message_btn">Send Message</span><i class="fas fa-paper-plane ml-3"></i>';
+            });
+        });
+        
+        // Form Field Animations
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

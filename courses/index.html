@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>All Courses - Professional Certification Training | SanMark Learning</title>
+    <meta name="description" content="Explore comprehensive professional certification courses at SanMark Learning. Business Analysis, Project Management, IT Security, Six Sigma, Microsoft Training and more.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4c1864',
+                        secondary: '#4d0a91',
+                        accent: '#f7b205'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+
+<body class="font-sans antialiased bg-slate-50">
+    
+    <!-- Hover-activated Sidebar -->
+    <aside id="sidebar" class="group fixed left-0 top-0 z-50 w-20 hover:w-72 h-screen bg-white shadow-xl transition-all duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <div class="bg-gradient-to-r from-primary to-secondary text-white p-4 h-[52px] flex items-center justify-center">
+                <!-- Icon in collapsed state -->
+                <i class="fas fa-book-open text-2xl group-hover:hidden"></i>
+                <!-- Title in expanded state -->
+                <h2 class="text-lg font-bold hidden group-hover:block whitespace-nowrap">Course Categories</h2>
+            </div>
+            <ul id="desktop-course-nav" class="flex-grow py-2 px-2 overflow-y-auto">
+                <!-- Categories will be populated by JS -->
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="ml-20 transition-all duration-300 ease-in-out">
+        <!-- Breadcrumb -->
+        <nav class="bg-white border-b border-slate-200 py-2">
+            <div class="container mx-auto px-4">
+                <ol class="flex items-center space-x-2 text-sm">
+                    <li>
+                        <a href="/" class="text-primary hover:underline transition-colors flex items-center">
+                            <i class="fas fa-home text-primary mr-2"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li><i class="fas fa-chevron-right text-slate-400 text-xs"></i></li>
+                    <li><span class="text-slate-700 font-medium">All Courses</span></li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Main Container -->
+        <div class="container mx-auto px-4 py-6">
+            <main id="main-content" class="flex-1 min-w-0">
+                <div id="course-content-area">
+                    <!-- Course cards will be injected here by JS -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 1. Course Data ---
+            const coursesData = [
+                {
+                    category: 'Business Analysis',
+                    icon: 'fas fa-chart-line text-blue-500',
+                    subCourses: [
+                        { title: 'ECBA Certification', description: 'Entry Certificate in Business Analysis for beginners.', badge: 'Popular', rating: 4.8, level: 'Beginner', duration: '21 hours', students: '1,830', tags: ['IIBA Endorsed', 'Entry Level'], price: 349, originalPrice: 499 },
+                        { title: 'CCBA Certification', description: 'Certification of Capability for mid-level professionals.', badge: 'Bestseller', rating: 4.9, level: 'Intermediate', duration: '35 hours', students: '2,150', tags: ['Live Training', 'Exam Prep'], price: 599, originalPrice: 799 },
+                        { title: 'CBAP Certification', description: 'Certified Business Analysis Professional for senior analysts.', badge: 'New', rating: 4.7, level: 'Advanced', duration: '35 hours', students: '1,250', tags: ['Expert Led', 'Case Studies'], price: 699, originalPrice: 899 },
+                    ]
+                },
+                {
+                    category: 'Project Management',
+                    icon: 'fas fa-project-diagram text-green-500',
+                    subCourses: [
+                        { title: 'PMP Certification', description: 'Globally recognized certification for project managers.', badge: 'Bestseller', rating: 4.9, level: 'Advanced', duration: '35 hours', students: '3,200', tags: ['PMI ATP', '35 PDUs'], price: 699, originalPrice: 899 },
+                        { title: 'CAPM Certification', description: 'For aspiring project leaders and team members.', badge: 'Popular', rating: 4.8, level: 'Beginner', duration: '23 hours', students: '1,980', tags: ['PMI Authorized', 'Practice Tests'], price: 449, originalPrice: 599 },
+                    ]
+                },
+                {
+                    category: 'IT Security & Data',
+                    icon: 'fas fa-shield-alt text-red-500',
+                     subCourses: [
+                        { title: 'CompTIA Security+', description: 'Core cybersecurity skills for IT professionals.', badge: 'Popular', rating: 4.7, level: 'Intermediate', duration: '40 hours', students: '2,500', tags: ['Cybersecurity', 'Exam Voucher'], price: 549, originalPrice: 699 },
+                        { title: 'CISSP Certification', description: 'Premier certification for information security leaders.', badge: 'Bestseller', rating: 4.8, level: 'Advanced', duration: '40 hours', students: '1,800', tags: ['(ISC)²', 'Management'], price: 799, originalPrice: 999 },
+                    ]
+                },
+                {
+                    category: 'Six Sigma Training',
+                    icon: 'fas fa-medal text-yellow-500',
+                    subCourses: [
+                        { title: 'Lean Six Sigma Green Belt', description: 'Learn to improve processes and reduce defects.', badge: 'Popular', rating: 4.8, level: 'Intermediate', duration: '35 hours', students: '2,200', tags: ['Process Improvement', 'IASSC'], price: 599, originalPrice: 799 },
+                    ]
+                },
+                {
+                    category: 'Microsoft Training',
+                    icon: 'fab fa-microsoft text-blue-600',
+                    subCourses: [
+                        { title: 'Microsoft Azure Fundamentals', description: 'Start your journey in cloud computing with Azure.', badge: 'New', rating: 4.6, level: 'Beginner', duration: '16 hours', students: '1,500', tags: ['Cloud Basics', 'AZ-900'], price: 299, originalPrice: 399 },
+                    ]
+                },
+                {
+                    category: 'Networking & Cloud',
+                    icon: 'fas fa-cloud text-purple-500',
+                    subCourses: [
+                        { title: 'AWS Solutions Architect', description: 'Prepare for the AWS SAA-C03 certification exam.', badge: 'Bestseller', rating: 4.9, level: 'Intermediate', duration: '45 hours', students: '2,800', tags: ['AWS Authorized', 'Hands-on Labs'], price: 699, originalPrice: 899 },
+                        { title: 'Cisco CCNA Training', description: 'Master the fundamentals of networking with CCNA.', badge: 'Popular', rating: 4.7, level: 'Intermediate', duration: '40 hours', students: '1,900', tags: ['Networking', 'Simulations'], price: 549, originalPrice: 699 },
+                    ]
+                }
+            ];
+
+            // --- 2. DOM Element References ---
+            const desktopNav = document.getElementById('desktop-course-nav');
+            const contentArea = document.getElementById('course-content-area');
+            
+            // --- 3. Functions to Render Content ---
+            const renderSubCourses = (categoryIndex) => {
+                const isAllCourses = categoryIndex === -1;
+                const category = isAllCourses ? { category: 'All Courses', subCourses: coursesData.flatMap(c => c.subCourses) } : coursesData[categoryIndex];
+
+                contentArea.innerHTML = ''; // Clear previous content
+
+                const headerHTML = `
+                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-4 mb-6">
+                        <h1 class="text-2xl font-bold text-slate-900">${category.category}</h1>
+                        <p class="text-slate-600 text-sm mt-1">
+                            ${isAllCourses ? 'Showing all available professional courses.' : `Explore professional courses in ${category.category.toLowerCase()}.`}
+                        </p>
+                    </div>
+                `;
+                
+                let cardsHTML = '<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">';
+                
+                category.subCourses.forEach(course => {
+                    const badgeGradient = {
+                        'Bestseller': 'bg-[linear-gradient(135deg,#f59e0b,#d97706)]',
+                        'Popular': 'bg-[linear-gradient(135deg,#10b981,#059669)]',
+                        'New': 'bg-[linear-gradient(135deg,#3b82f6,#2563eb)]'
+                    }[course.badge] || '';
+
+                    const levelClass = {
+                        'Beginner': 'bg-green-100 text-green-800',
+                        'Intermediate': 'bg-orange-100 text-orange-800',
+                        'Advanced': 'bg-red-100 text-red-800'
+                    }[course.level] || 'bg-slate-100 text-slate-700';
+                    
+                    cardsHTML += `
+                        <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <div class="relative">
+                                ${course.badge ? `<div class="absolute top-3 left-3 z-10"><span class="${badgeGradient} text-white px-2 py-1 rounded-full text-xs font-bold">${course.badge}</span></div>` : ''}
+                                <div class="absolute top-3 right-3 z-10">
+                                    <div class="bg-white rounded-full px-2 py-1 flex items-center shadow-sm">
+                                        <i class="fas fa-star text-yellow-400 text-xs mr-1"></i>
+                                        <span class="font-semibold text-xs text-slate-700">${course.rating}</span>
+                                    </div>
+                                </div>
+                                <div class="h-36 bg-slate-200 flex items-center justify-center">
+                                    <h2 class="text-5xl font-bold text-slate-400 opacity-50 select-none">${course.title.split(' ')[0]}</h2>
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-base font-bold text-slate-900 leading-tight">${course.title}</h3>
+                                    <span class="text-xs px-2 py-1 rounded-full ml-2 whitespace-nowrap ${levelClass}">${course.level}</span>
+                                </div>
+                                <p class="text-slate-600 text-sm mb-3 flex-grow">${course.description}</p>
+                                <div class="flex items-center text-xs text-slate-500 mb-4 space-x-4">
+                                    <div class="flex items-center"><i class="fas fa-clock mr-1 text-primary"></i><span>${course.duration}</span></div>
+                                    <div class="flex items-center"><i class="fas fa-users mr-1 text-secondary"></i><span>${course.students} students</span></div>
+                                </div>
+                                <div class="flex items-center justify-between pt-3 border-t border-slate-100">
+                                    <div>
+                                        <span class="text-xl font-bold text-primary">$${course.price}</span>
+                                        ${course.originalPrice ? `<span class="text-sm text-slate-400 line-through ml-1">$${course.originalPrice}</span>` : ''}
+                                    </div>
+                                    <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                cardsHTML += '</div>';
+                contentArea.innerHTML = headerHTML + cardsHTML;
+            };
+            
+            const setActiveState = (buttonEl) => {
+                document.querySelectorAll('.sidebar-item').forEach(btn => {
+                    btn.classList.remove('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'font-semibold');
+                    btn.classList.add('text-slate-700');
+                });
+                buttonEl.classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'font-semibold');
+                buttonEl.classList.remove('text-slate-700');
+            };
+
+            const handleCategoryChange = (index, buttonEl) => {
+                setActiveState(buttonEl);
+                renderSubCourses(index);
+            };
+
+            // --- 4. Initialization ---
+            desktopNav.innerHTML = ''; // Clear for dynamic population
+            
+            // Add 'All Courses' link first
+            const allCoursesButton = document.createElement('button');
+            allCoursesButton.className = "sidebar-item w-full flex items-center justify-between p-3 rounded-md transition-all duration-200";
+            allCoursesButton.innerHTML = `
+                <div class="flex items-center">
+                    <i class="fas fa-th-large fa-fw w-8 text-center text-lg"></i>
+                    <span class="text-sm font-medium hidden group-hover:block ml-3 whitespace-nowrap">All Courses</span>
+                </div>
+                <span class="bg-accent text-primary text-xs px-2 py-0.5 rounded-full font-bold hidden group-hover:block">${coursesData.reduce((acc, cat) => acc + cat.subCourses.length, 0)}+</span>
+            `;
+            allCoursesButton.onclick = (e) => handleCategoryChange(-1, e.currentTarget);
+            desktopNav.appendChild(allCoursesButton);
+
+            // Populate other category links
+            coursesData.forEach((category, index) => {
+                const button = document.createElement('button');
+                button.className = "sidebar-item w-full flex items-center justify-between p-3 rounded-md text-slate-700 transition-all duration-200";
+                button.innerHTML = `
+                    <div class="flex items-center">
+                        <i class="${category.icon} fa-fw w-8 text-center text-lg"></i>
+                        <span class="text-sm font-medium hidden group-hover:block ml-3 whitespace-nowrap">${category.category}</span>
+                    </div>
+                    <span class="text-slate-500 text-xs hidden group-hover:block">${category.subCourses.length}</span>
+                `;
+                button.onclick = (e) => handleCategoryChange(index, e.currentTarget);
+                desktopNav.appendChild(button);
+            });
+            
+            // Initial load
+            handleCategoryChange(-1, allCoursesButton); // Show 'All Courses' by default
+
+        });
+    </script>
+</body>
+</html>
+
