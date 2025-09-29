@@ -27,29 +27,111 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Custom CSS for Sidebar -->
+    <style>
+        :root {
+            --header-height: 120px; /* Default header height, will be updated by JS */
+            --footer-height: 200px; /* Estimated footer height */
+        }
+        
+        .sidebar-custom {
+            top: var(--header-height);
+            height: calc(100vh - var(--header-height) - var(--footer-height));
+            max-height: calc(100vh - var(--header-height) - 20px); /* 20px buffer from bottom */
+        }
+        
+        /* Mobile Sidebar Styles */
+        .mobile-sidebar {
+            height: calc(100vh - var(--header-height) - 20px);
+            top: var(--header-height);
+        }
+        
+        @media (max-width: 1023px) {
+            .sidebar-custom {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            
+            .sidebar-custom.mobile-open {
+                transform: translateX(0);
+            }
+        }
+        
+        /* Ensure sidebar doesn't go below viewport */
+        .sidebar-container {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #4c1864 #f1f5f9;
+        }
+        
+        .sidebar-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 3px;
+        }
+        
+        .sidebar-container::-webkit-scrollbar-thumb {
+            background: #4c1864;
+            border-radius: 3px;
+        }
+        
+        .sidebar-container::-webkit-scrollbar-thumb:hover {
+            background: #3a1249;
+        }
+    </style>
 </head>
 
 <body class="font-sans antialiased bg-slate-50">
     <!-- header.html content goes here -->
      <div id="header"></div>
     
-    <!-- Hover-activated Sidebar -->
-    <aside id="sidebar" class="group fixed left-0 top-0 z-50 w-20 hover:w-72 h-screen bg-white shadow-xl transition-all duration-300 ease-in-out">
-        <div class="flex flex-col h-full">
-            <div class="bg-gradient-to-r from-primary to-secondary text-white p-4 h-[52px] flex items-center justify-center">
-                <!-- Icon in collapsed state -->
-                <i class="fas fa-book-open text-2xl group-hover:hidden"></i>
-                <!-- Title in expanded state -->
-                <h2 class="text-lg font-bold hidden group-hover:block whitespace-nowrap" data-translate="course_categories">Course Categories</h2>
-            </div>
-            <ul id="desktop-course-nav" class="flex-grow py-2 px-2 overflow-y-auto">
+    <!-- Desktop Sidebar - Hidden on mobile -->
+    <aside id="sidebar" class="sidebar-custom group fixed left-0 z-40 w-20 hover:w-72 bg-white shadow-xl transition-all duration-300 ease-in-out hidden lg:flex flex-col">
+        <!-- Sidebar Header -->
+        <div class="bg-gradient-to-r from-primary to-secondary text-white p-4 h-[52px] flex items-center justify-center flex-shrink-0">
+            <!-- Icon in collapsed state -->
+            <i class="fas fa-book-open text-2xl group-hover:hidden"></i>
+            <!-- Title in expanded state -->
+            <h2 class="text-lg font-bold hidden group-hover:block whitespace-nowrap" data-translate="course_categories">Course Categories</h2>
+        </div>
+        <!-- Sidebar Navigation -->
+        <div class="sidebar-container flex-grow">
+            <ul id="desktop-course-nav" class="py-2 px-2">
+                <!-- Categories will be populated by JS -->
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-toggle" class="lg:hidden fixed top-4 left-4 z-50 w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-lg shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-105">
+        <i class="fas fa-bars text-lg"></i>
+    </button>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div id="mobile-sidebar-overlay" class="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"></div>
+
+    <!-- Mobile Sidebar -->
+    <aside id="mobile-sidebar" class="mobile-sidebar lg:hidden fixed left-0 z-50 w-80 bg-white shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- Mobile Sidebar Header -->
+        <div class="bg-gradient-to-r from-primary to-secondary text-white p-4 flex items-center justify-between flex-shrink-0">
+            <h2 class="text-lg font-bold" data-translate="course_categories">Course Categories</h2>
+            <button id="mobile-sidebar-close" class="w-8 h-8 flex items-center justify-center rounded hover:bg-white/20 transition-colors">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+        </div>
+        <!-- Mobile Sidebar Navigation -->
+        <div class="sidebar-container flex-grow">
+            <ul id="mobile-course-nav" class="py-2 px-2">
                 <!-- Categories will be populated by JS -->
             </ul>
         </div>
     </aside>
 
     <!-- Main Content Wrapper -->
-    <div class="ml-20 transition-all duration-300 ease-in-out">
+    <div class="lg:ml-20 transition-all duration-300 ease-in-out">
         <!-- Breadcrumb -->
         <nav class="bg-white border-b border-slate-200 py-2">
             <div class="container mx-auto px-4">
@@ -61,7 +143,7 @@
                         </a>
                     </li>
                     <li><i class="fas fa-chevron-right text-slate-400 text-xs"></i></li>
-                    <li>                    <span class="text-slate-700 font-medium" data-translate="all_courses">All Courses</span></li>
+                    <li><span class="text-slate-700 font-medium" data-translate="all_courses">All Courses</span></li>
                 </ol>
             </div>
         </nav>
@@ -124,7 +206,71 @@
                     if (typeof initializeFormValidation === 'function') {
                         initializeFormValidation();
                     }
+                    
+                    // Calculate and set header height
+                    calculateHeaderHeight();
+                    
+                    // Initialize mobile sidebar
+                    initializeMobileSidebar();
                 }
+            }
+            
+            // Function to calculate header height dynamically
+            function calculateHeaderHeight() {
+                const header = document.getElementById('header');
+                if (header) {
+                    const headerHeight = header.offsetHeight + 'px';
+                    document.documentElement.style.setProperty('--header-height', headerHeight);
+                    console.log('Header height set to:', headerHeight);
+                }
+            }
+            
+            // Function to initialize mobile sidebar
+            function initializeMobileSidebar() {
+                const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+                const mobileSidebar = document.getElementById('mobile-sidebar');
+                const mobileOverlay = document.getElementById('mobile-sidebar-overlay');
+                const mobileClose = document.getElementById('mobile-sidebar-close');
+                
+                function openMobileSidebar() {
+                    mobileSidebar.classList.remove('-translate-x-full');
+                    mobileOverlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+                
+                function closeMobileSidebar() {
+                    mobileSidebar.classList.add('-translate-x-full');
+                    mobileOverlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+                
+                // Event listeners
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.addEventListener('click', openMobileSidebar);
+                }
+                
+                if (mobileClose) {
+                    mobileClose.addEventListener('click', closeMobileSidebar);
+                }
+                
+                if (mobileOverlay) {
+                    mobileOverlay.addEventListener('click', closeMobileSidebar);
+                }
+                
+                // ESC key to close
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        closeMobileSidebar();
+                    }
+                });
+                
+                // Close on window resize to desktop
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth >= 1024) {
+                        closeMobileSidebar();
+                    }
+                    calculateHeaderHeight(); // Recalculate on resize
+                });
             }
             
             // Load header and footer components with correct relative paths
@@ -206,6 +352,7 @@
 
             // --- 2. DOM Element References ---
             const desktopNav = document.getElementById('desktop-course-nav');
+            const mobileNav = document.getElementById('mobile-course-nav');
             const contentArea = document.getElementById('course-content-area');
             
             // --- 3. Functions to Render Content ---
@@ -279,53 +426,109 @@
                 contentArea.innerHTML = headerHTML + cardsHTML;
             };
             
-            const setActiveState = (buttonEl) => {
+            const setActiveState = (buttonEl, categoryIndex = -1) => {
+                // Update both desktop and mobile navigation
                 document.querySelectorAll('.sidebar-item').forEach(btn => {
                     btn.classList.remove('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'font-semibold');
                     btn.classList.add('text-slate-700');
                 });
-                buttonEl.classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'font-semibold');
-                buttonEl.classList.remove('text-slate-700');
+                
+                // Find corresponding buttons in both desktop and mobile
+                const desktopButtons = document.querySelectorAll('#desktop-course-nav .sidebar-item');
+                const mobileButtons = document.querySelectorAll('#mobile-course-nav .sidebar-item');
+                
+                if (categoryIndex === -1) {
+                    // All Courses button (first button)
+                    if (desktopButtons[0]) {
+                        desktopButtons[0].classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'font-semibold');
+                        desktopButtons[0].classList.remove('text-slate-700');
+                    }
+                    if (mobileButtons[0]) {
+                        mobileButtons[0].classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'font-semibold');
+                        mobileButtons[0].classList.remove('text-slate-700');
+                    }
+                } else {
+                    // Category button (categoryIndex + 1 because All Courses is at index 0)
+                    const buttonIndex = categoryIndex + 1;
+                    if (desktopButtons[buttonIndex]) {
+                        desktopButtons[buttonIndex].classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'font-semibold');
+                        desktopButtons[buttonIndex].classList.remove('text-slate-700');
+                    }
+                    if (mobileButtons[buttonIndex]) {
+                        mobileButtons[buttonIndex].classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-white', 'font-semibold');
+                        mobileButtons[buttonIndex].classList.remove('text-slate-700');
+                    }
+                }
             };
 
             const handleCategoryChange = (index, buttonEl) => {
-                setActiveState(buttonEl);
+                setActiveState(buttonEl, index);
                 renderSubCourses(index);
+                
+                // Close mobile sidebar if open
+                const mobileSidebar = document.getElementById('mobile-sidebar');
+                const mobileOverlay = document.getElementById('mobile-sidebar-overlay');
+                if (mobileSidebar && !mobileSidebar.classList.contains('-translate-x-full')) {
+                    mobileSidebar.classList.add('-translate-x-full');
+                    mobileOverlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
             };
 
             // --- 4. Initialization ---
             desktopNav.innerHTML = ''; // Clear for dynamic population
+            mobileNav.innerHTML = ''; // Clear mobile navigation too
             
-            // Add 'All Courses' link first
-            const allCoursesButton = document.createElement('button');
-            allCoursesButton.className = "sidebar-item w-full flex items-center justify-between p-3 rounded-md transition-all duration-200";
-            allCoursesButton.innerHTML = `
-                <div class="flex items-center">
-                    <i class="fas fa-th-large fa-fw w-8 text-center text-lg"></i>
-                    <span class="text-sm font-medium hidden group-hover:block ml-3 whitespace-nowrap" data-translate="all_courses">All Courses</span>
-                </div>
-                <span class="bg-accent text-primary text-xs px-2 py-0.5 rounded-full font-bold hidden group-hover:block">${coursesData.reduce((acc, cat) => acc + cat.subCourses.length, 0)}+</span>
-            `;
-            allCoursesButton.onclick = (e) => handleCategoryChange(-1, e.currentTarget);
-            desktopNav.appendChild(allCoursesButton);
-
-            // Populate other category links
-            coursesData.forEach((category, index) => {
+            // Function to create navigation button
+            function createNavButton(category, index, isAllCourses = false) {
                 const button = document.createElement('button');
                 button.className = "sidebar-item w-full flex items-center justify-between p-3 rounded-md text-slate-700 transition-all duration-200";
-                button.innerHTML = `
-                    <div class="flex items-center">
-                        <i class="${category.icon} fa-fw w-8 text-center text-lg"></i>
-                        <span class="text-sm font-medium hidden group-hover:block ml-3 whitespace-nowrap">${category.category}</span>
-                    </div>
-                    <span class="text-slate-500 text-xs hidden group-hover:block">${category.subCourses.length}</span>
-                `;
-                button.onclick = (e) => handleCategoryChange(index, e.currentTarget);
-                desktopNav.appendChild(button);
+                
+                if (isAllCourses) {
+                    button.innerHTML = `
+                        <div class="flex items-center">
+                            <i class="fas fa-th-large fa-fw w-8 text-center text-lg"></i>
+                            <span class="text-sm font-medium ${desktopNav ? 'hidden group-hover:block' : ''} ml-3 whitespace-nowrap" data-translate="all_courses">All Courses</span>
+                        </div>
+                        <span class="bg-accent text-primary text-xs px-2 py-0.5 rounded-full font-bold ${desktopNav ? 'hidden group-hover:block' : ''}">${coursesData.reduce((acc, cat) => acc + cat.subCourses.length, 0)}+</span>
+                    `;
+                    button.onclick = (e) => handleCategoryChange(-1, e.currentTarget);
+                } else {
+                    button.innerHTML = `
+                        <div class="flex items-center">
+                            <i class="${category.icon} fa-fw w-8 text-center text-lg"></i>
+                            <span class="text-sm font-medium ${desktopNav ? 'hidden group-hover:block' : ''} ml-3 whitespace-nowrap">${category.category}</span>
+                        </div>
+                        <span class="text-slate-500 text-xs ${desktopNav ? 'hidden group-hover:block' : ''}">${category.subCourses.length}</span>
+                    `;
+                    button.onclick = (e) => handleCategoryChange(index, e.currentTarget);
+                }
+                
+                return button;
+            }
+            
+            // Add 'All Courses' to both desktop and mobile navigation
+            const desktopAllCoursesButton = createNavButton(null, -1, true);
+            desktopNav.appendChild(desktopAllCoursesButton);
+            
+            const mobileAllCoursesButton = createNavButton(null, -1, true);
+            mobileAllCoursesButton.innerHTML = mobileAllCoursesButton.innerHTML.replace(/hidden group-hover:block/g, ''); // Remove hidden classes for mobile
+            mobileNav.appendChild(mobileAllCoursesButton);
+
+            // Populate category links for both desktop and mobile
+            coursesData.forEach((category, index) => {
+                // Desktop button
+                const desktopButton = createNavButton(category, index, false);
+                desktopNav.appendChild(desktopButton);
+                
+                // Mobile button
+                const mobileButton = createNavButton(category, index, false);
+                mobileButton.innerHTML = mobileButton.innerHTML.replace(/hidden group-hover:block/g, ''); // Remove hidden classes for mobile
+                mobileNav.appendChild(mobileButton);
             });
             
-            // Initial load
-            handleCategoryChange(-1, allCoursesButton); // Show 'All Courses' by default
+            // Initial load - show 'All Courses' by default
+            handleCategoryChange(-1, desktopAllCoursesButton);
 
         });
     </script>
