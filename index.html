@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/popup.css">
     <script>
         tailwind.config = {
             theme: {
@@ -2035,10 +2036,26 @@
     
     <!-- Footer Container -->
     <div id="footer"></div>
+    <!-- Popup markup -->
+    <div id="site-popup-overlay" class="site-popup-overlay" aria-hidden="true">
+        <div class="site-popup" role="dialog" aria-modal="true" aria-labelledby="site-popup-title">
+            <button class="site-popup-close" id="sitePopupClose" aria-label="Close popup">&times;</button>
+            <div class="site-popup-body">
+                <h3 id="site-popup-title">Welcome to SanMark Learning</h3>
+                <p>Get 10% off your first course — or book a free consultation with our advisors.</p>
+                <div class="site-popup-actions">
+                    <a href="contact-us-1.html" class="btn btn-primary">Get Free Consultation</a>
+                    <a href="courses/index.html" class="btn btn-outline">Browse Courses</a>
+                </div>
+                <label class="dont-show"><input type="checkbox" id="dontShowPopup"> Don't show again</label>
+            </div>
+        </div>
+    </div>
     
     <!-- Scripts -->
     <script src="assets/components.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/popup.js"></script>
 </body>
 </html>

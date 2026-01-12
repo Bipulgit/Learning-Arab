@@ -1,0 +1,15 @@
+/* Popup styles */
+.site-popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:9999}
+.site-popup-overlay.show{opacity:1;pointer-events:auto}
+.site-popup{background:#fff;max-width:760px;width:92%;border-radius:14px;padding:28px 28px 20px;box-shadow:0 20px 50px rgba(2,6,23,0.45);transform:translateY(8px) scale(.98);transition:transform .28s cubic-bezier(.2,.9,.3,1)}
+.site-popup-overlay.show .site-popup{transform:translateY(0) scale(1)}
+.site-popup-close{position:absolute;right:14px;top:12px;background:transparent;border:0;font-size:30px;line-height:1;color:#333;cursor:pointer;padding:6px;border-radius:8px}
+.site-popup-body{padding:6px 8px 4px}
+.site-popup-body h3{font-size:28px;margin:6px 0 8px;color:#0f172a}
+.site-popup-body p{color:#334155;margin-bottom:14px}
+.site-popup-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+.btn-primary{background:linear-gradient(90deg,#0066cc,#0077e6);color:#fff}
+.btn-outline{background:transparent;color:#0f172a;border:2px solid #e6eefc}
+.dont-show{display:block;margin-top:12px;font-size:14px;color:#475569}
+@media (max-width:640px){.site-popup{padding:18px;border-radius:12px}.site-popup-body h3{font-size:20px}}
