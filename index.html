@@ -2039,15 +2039,43 @@
     <!-- Popup markup -->
     <div id="site-popup-overlay" class="site-popup-overlay" aria-hidden="true">
         <div class="site-popup" role="dialog" aria-modal="true" aria-labelledby="site-popup-title">
-            <button class="site-popup-close" id="sitePopupClose" aria-label="Close popup">&times;</button>
-            <div class="site-popup-body">
-                <h3 id="site-popup-title">Welcome to SanMark Learning</h3>
-                <p>Get 10% off your first course — or book a free consultation with our advisors.</p>
-                <div class="site-popup-actions">
-                    <a href="contact-us-1.html" class="btn btn-primary">Get Free Consultation</a>
-                    <a href="courses/index.html" class="btn btn-outline">Browse Courses</a>
+            <button class="site-popup-close" id="sitePopupClose" aria-label="Close popup">
+                <span class="close-icon">×</span>
+            </button>
+
+            <div class="site-popup-grid">
+                <div class="site-popup-media">
+                    <img src="assets/images/home-img/home-1.jpeg" alt="SanMark Learning" loading="lazy">
+                    <div class="coupon-badge">10% OFF</div>
                 </div>
-                <label class="dont-show"><input type="checkbox" id="dontShowPopup"> Don't show again</label>
+
+                <div class="site-popup-body">
+                    <div class="popup-header">
+                        <h3 id="site-popup-title">Welcome to SanMark Learning</h3>
+                        <p class="muted">Fast-track your career — join a top-rated certification program today.</p>
+                    </div>
+
+                    <ul class="popup-features">
+                        <li>Live instructor-led classes</li>
+                        <li>Practice tests &amp; recordings</li>
+                        <li>Career guidance &amp; placement support</li>
+                    </ul>
+
+                    <!-- <form id="popupForm" class="popup-form" novalidate>
+                        <label for="popupEmail" class="sr-only">Your email</label>
+                        <input id="popupEmail" name="email" type="email" placeholder="Enter your email for the coupon" required>
+                        <button type="submit" class="btn btn-primary">Get Coupon</button>
+                    </form> -->
+
+                    <div id="popupMsg" class="popup-msg" aria-live="polite"></div>
+
+                    <div class="site-popup-actions">
+                        <a href="contact-us-1.html" class="btn btn-outline">Book Free Consultation</a>
+                        <a href="courses/index.html" class="btn btn-ghost">Browse Courses</a>
+                    </div>
+
+                    <label class="dont-show"><input type="checkbox" id="dontShowPopup"> Don't show again</label>
+                </div>
             </div>
         </div>
     </div>
